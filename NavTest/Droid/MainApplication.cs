@@ -21,7 +21,8 @@ namespace NavTest.Droid
         {
             base.OnCreate();
             RegisterActivityLifecycleCallbacks(this);
-            Core.Initialize();
+            var router = new Router();
+            Core.Initialize(router);
         }
 
         public override void OnTerminate()

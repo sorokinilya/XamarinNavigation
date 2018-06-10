@@ -4,7 +4,7 @@ using Android.Support.V7.Widget;
 
 namespace NavTest.Droid
 {
-    public class BaseActivity : AppCompatActivity
+    public class BaseActivity<T> : AppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -19,6 +19,9 @@ namespace NavTest.Droid
 
             }
         }
+
+        public T ViewModel { get; set; }
+        public object Controller { get; set; }
 
         public Toolbar Toolbar
         {

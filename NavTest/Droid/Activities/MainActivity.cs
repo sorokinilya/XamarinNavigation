@@ -14,7 +14,7 @@ namespace NavTest.Droid
         LaunchMode = LaunchMode.SingleInstance,
         ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation,
         ScreenOrientation = ScreenOrientation.Portrait)]
-    public class MainActivity : BaseActivity
+    public class MainActivity : Activity
     {
         protected override int LayoutResource => Resource.Layout.activity_main;
 

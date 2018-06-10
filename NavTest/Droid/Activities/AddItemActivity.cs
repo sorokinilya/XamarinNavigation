@@ -4,22 +4,19 @@ using Android.App;
 using Android.OS;
 using Android.Widget;
 using Android.Support.Design.Widget;
+using NavTest.ViewModels.ItemNew;
 
 namespace NavTest.Droid
 {
     [Activity(Label = "AddItemActivity")]
-    public class AddItemActivity : Activity
+    public class AddItemActivity : BaseActivity<AddItemViewModel>
     {
         FloatingActionButton saveButton;
         EditText title, description;
 
-        public ItemsViewModel ViewModel { get; set; }
-
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
-            ViewModel = BrowseFragment.ViewModel;
 
             // Create your application here
             SetContentView(Resource.Layout.activity_add_item);
@@ -37,9 +34,8 @@ namespace NavTest.Droid
                 Text = title.Text,
                 Description = description.Text
             };
-            ViewModel.AddItemAction.Execute(item);
-
-            Finish();
+            ViewModel.AddItem(item);
+            ViewModel.ShowItems();
         }
     }
 }

@@ -18,7 +18,6 @@ namespace NavTest.iOS
 
             TabBar.Items[0].Title = ViewModel.UIModel.browseTitle;
             TabBar.Items[1].Title = ViewModel.UIModel.aboutTitle;
-            ViewModel.ShowItems();
         }
     }
 }

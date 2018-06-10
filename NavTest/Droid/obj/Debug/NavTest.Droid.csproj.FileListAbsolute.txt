@@ -1,0 +1,2 @@
+/Users/isorokin/Work/Test/NavTest/NavTest/Droid/obj/Debug/NavTest.Droid.csprojResolveAssemblyReference.cache
+/Users/isorokin/Work/Test/NavTest/NavTest/Droid/obj/Debug/NavTest.Droid.csproj.CoreCompileInputs.cache

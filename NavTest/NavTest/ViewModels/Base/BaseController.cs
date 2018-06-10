@@ -3,13 +3,13 @@ using NavTest.Services;
 
 namespace NavTest.ViewModels.Base
 {
-    public class BaseController<T> where T : class, IBaseViewModel
+    public class BaseController<T> where T : class, IBaseViewModel, new()
     {
         public T ViewModel { get; protected set; }
 
-        public BaseController(IRouter router, T viewModel = null)
+        public BaseController(IRouter router)
         {
-            this.ViewModel = viewModel;
+            this.ViewModel = new T();
 
             this.ViewModel.ShowItems = () =>
             {

@@ -7,9 +7,11 @@ namespace NavTest
 
         public static void Initialize(IRouter router)
         {
-            IDataStore store = new MockDataStore();
+            DataStore store = new DataStore();
             ServiceLayer.Instance.Register(store);
             ServiceLayer.Instance.Register(router);
+            store.Initialize();
+            router.Initialize();
         }
     }
 }

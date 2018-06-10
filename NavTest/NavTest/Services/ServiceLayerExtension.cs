@@ -10,5 +10,13 @@ namespace NavTest.Services
                 return this.Get<IRouter>();
             }
         }
+
+        public DataStore DataStore
+        {
+            get
+            {
+                return this.Get<DataStore>();   
+            }
+        }
     }
 }

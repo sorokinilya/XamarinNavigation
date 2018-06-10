@@ -5,7 +5,10 @@ namespace NavTest.ViewModels.Items
 {
     public class ItemsController : BaseController<ItemsViewModel>
     {
-        public ItemsController(IRouter router) : base(router, new ItemsViewModel())
+
+       // private DataStore DataStore { get; set; } = ServiceLayer.Instance.DataStore;
+
+        public ItemsController(IRouter router) : base(router)
         {
 
         }

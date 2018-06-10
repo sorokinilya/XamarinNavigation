@@ -123,10 +123,6 @@
     <Compile Include="ViewControllers\AboutViewController.designer.cs">
       <DependentUpon>AboutViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewControllers\BrowseViewController.cs" />
-    <Compile Include="ViewControllers\BrowseViewController.designer.cs">
-      <DependentUpon>BrowseViewController.cs</DependentUpon>
-    </Compile>
     <Compile Include="ViewControllers\ItemNewViewController.cs" />
     <Compile Include="ViewControllers\ItemNewViewController.designer.cs">
       <DependentUpon>ItemNewViewController.cs</DependentUpon>
@@ -142,6 +138,11 @@
     <Compile Include="ViewControllers\TabBarController\TabBarViewModel.cs" />
     <Compile Include="ViewControllers\TabBarController\TabBarUIModel.cs" />
     <Compile Include="ViewControllers\TabBarController\TabBarController.cs" />
+    <Compile Include="ViewControllers\Browse\BrowseViewController.cs" />
+    <Compile Include="ViewControllers\Browse\BrowseViewController.designer.cs">
+      <DependentUpon>BrowseViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\Browse\ItemsDataSource.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Entitlements.plist" />
@@ -154,6 +155,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewControllers\TabBarController\" />
+    <Folder Include="ViewControllers\Browse\" />
   </ItemGroup>
   <Import Project="..\NavTest\NavTest.projitems" Label="Shared" Condition="Exists('..\NavTest\NavTest.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

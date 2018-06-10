@@ -1,42 +1,30 @@
 ﻿<Properties StartupConfiguration="{1E8CDFCB-500C-4D60-8A51-5204A51DEA5E}|Default">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/Router.cs">
     <Files>
-      <File FileName="iOS/ViewControllers/TabBarController/TabBarViewModel.cs" Line="6" Column="64" />
-      <File FileName="iOS/ViewControllers/TabBarController/TabBarUIModel.cs" Line="9" Column="15" />
-      <File FileName="NavTest/ViewModels/ItemNew/AddItemUIModel.cs" Line="6" Column="35" />
-      <File FileName="iOS/ViewControllers/TabBarController/TabBarViewController.cs" Line="23" Column="35" />
-      <File FileName="iOS/AppDelegate.cs" Line="24" Column="37" />
-      <File FileName="iOS/ViewControllers/AboutViewController.cs" Line="8" Column="47" />
-      <File FileName="iOS/Main.cs" Line="16" Column="1" />
-      <File FileName="../../../../../../Library/Frameworks/Xamarin.iOS.framework/Versions/11.10.1.177/src/Xamarin.iOS/mcs/class/corlib/System.Reflection/MonoMethod.cs" Line="652" Column="1" />
-      <File FileName="iOS/ViewControllers/BaseViewController.cs" Line="13" Column="1" />
-      <File FileName="iOS/ViewControllers/DetailViewControllers/BrowseItemDetailViewController.cs" Line="10" Column="80" />
-      <File FileName="NavTest/ViewModels/Base/BaseViewModel.cs" Line="9" Column="18" />
-      <File FileName="NavTest/ViewModels/Base/BaseController.cs" Line="6" Column="18" />
-      <File FileName="NavTest/ViewModels/Base/IBaseViewModel.cs" Line="8" Column="40" />
-      <File FileName="iOS/Router.cs" Line="76" Column="1" />
-      <File FileName="iOS/ViewControllers/TabBarController/TabBarController.cs" Line="12" Column="9" />
-      <File FileName="iOS/ViewControllers/BrowseViewController.cs" Line="11" Column="96" />
-      <File FileName="NavTest/ViewModels/Items/ItemsUIModel.cs" Line="8" Column="6" />
-      <File FileName="NavTest/ViewModels/Items/ItemsViewModel.cs" Line="9" Column="54" />
-      <File FileName="NavTest/ViewModels/Items/ItemsController.cs" Line="6" Column="44" />
+      <File FileName="iOS/ViewControllers/Browse/BrowseViewController.cs" Line="33" Column="80" />
+      <File FileName="NavTest/ViewModels/Items/ItemsViewModel.cs" Line="8" Column="36" />
+      <File FileName="NavTest/ViewModels/Base/BaseController.cs" Line="10" Column="30" />
+      <File FileName="NavTest/ViewModels/Items/ItemsController.cs" Line="9" Column="9" />
+      <File FileName="NavTest/Services/DataStore.cs" Line="29" Column="36" />
+      <File FileName="NavTest/Services/IRouter.cs" Line="4" Column="30" />
+      <File FileName="iOS/Router.cs" Line="30" Column="18" />
+      <File FileName="NavTest/Services/ServiceLayer.cs" Line="18" Column="42" />
+      <File FileName="NavTest/Core.cs" Line="8" Column="41" />
+      <File FileName="NavTest/Services/ServiceLayerExtension.cs" Line="18" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/isorokin/Work/Test/NavTest/NavTest/NavTest/Helpers/ServiceLocator.cs" relfile="NavTest/Helpers/ServiceLocator.cs" line="15" column="1" />
-      <Breakpoint file="/Users/isorokin/Work/Test/NavTest/NavTest/iOS/ViewControllers/TabBarController/TabBarController.cs" relfile="iOS/ViewControllers/TabBarController/TabBarController.cs" line="23" column="1" />
-      <Breakpoint file="/Users/isorokin/Work/Test/NavTest/NavTest/iOS/Router.cs" relfile="iOS/Router.cs" line="62" column="1" />
-      <Breakpoint file="/Users/isorokin/Work/Test/NavTest/NavTest/iOS/Router.cs" relfile="iOS/Router.cs" line="69" column="1" />
-      <Breakpoint file="/Users/isorokin/Work/Test/NavTest/NavTest/iOS/Router.cs" relfile="iOS/Router.cs" line="76" column="1" />
+      <Breakpoint file="/Users/ilyasorokin/Work/XamarinNavigation/NavTest/NavTest/Helpers/ServiceLocator.cs" relfile="NavTest/Helpers/ServiceLocator.cs" line="15" column="1" />
+      <Breakpoint file="/Users/ilyasorokin/Work/XamarinNavigation/NavTest/iOS/ViewControllers/TabBarController/TabBarController.cs" relfile="iOS/ViewControllers/TabBarController/TabBarController.cs" line="21" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>
     <Watch file="../../../../../../Projects/VRG-Ringorang/Core/VRG.Library.Core/Services/ChallengesService.cs" line="73" offsetX="1051" offsetY="1080" expression="text" liveUpdate="False" />
     <Watch file="../../../../../../Projects/VRG-Ringorang/Libraries/IOS/Provider/WKWebViewProvider/WebViewProvider.cs" line="166" offsetX="899" offsetY="2475" expression="webView.Url.AbsoluteUrl" liveUpdate="False" />
   </MonoDevelop.Ide.DebuggingService.PinnedWatches>
-  <MonoDevelop.Ide.ItemProperties.NavTest.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.B1A2BB2E-7EB3-4115-98A4-CF15F66D19A4">
+  <MonoDevelop.Ide.ItemProperties.NavTest.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.29DC7E21-E2F6-45DD-BB2C-C02C59130DDA">
     <MonoDevelop.MacDev.AppleDevelopmentTeam />
   </MonoDevelop.Ide.ItemProperties.NavTest.iOS>
   <MultiItemStartupConfigurations />

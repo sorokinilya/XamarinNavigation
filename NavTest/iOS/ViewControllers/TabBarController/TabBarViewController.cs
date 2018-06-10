@@ -16,8 +16,6 @@ namespace NavTest.iOS
         {
             base.ViewDidLoad();
 
-            UIViewController[] controllers = { ViewModel.browseViewController, ViewModel.aboutViewController };
-            this.ViewControllers = controllers;
             TabBar.Items[0].Title = ViewModel.UIModel.browseTitle;
             TabBar.Items[1].Title = ViewModel.UIModel.aboutTitle;
             ViewModel.ShowItems();

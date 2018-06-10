@@ -10,8 +10,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Models\Item.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\IDataStore.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\MockDataStore.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\DataStore.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\ServiceLayer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\IRouter.cs" />
@@ -28,6 +27,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Base\BaseController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Base\IBaseViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Items\ItemsController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\About\AboutController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemNew\AddItemController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Helpers\" />

@@ -16,16 +16,16 @@ namespace NavTest.iOS
         {
             base.ViewDidLoad();
 
-            //btnSaveItem.TouchUpInside += (sender, e) =>
-            //{
-            //    var item = new Item
-            //    {
-            //        Text = txtTitle.Text,
-            //        Description = txtDesc.Text
-            //    };
-            //    ViewModel.AddItemAction(item);
-            //    NavigationController.PopToRootViewController(true);
-            //};
+            btnSaveItem.TouchUpInside += (sender, e) =>
+            {
+                var item = new Item
+                {
+                    Text = txtTitle.Text,
+                    Description = txtDesc.Text
+                };
+                ViewModel.AddItem(item);
+                ViewModel.ShowItems();
+            };
         }
     }
 }

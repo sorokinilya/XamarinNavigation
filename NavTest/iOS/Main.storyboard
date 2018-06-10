@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -129,7 +129,7 @@
         <!--Items-->
         <scene sceneID="afx-Zx-YK5">
             <objects>
-                <viewController id="of6-NG-2kb" customClass="ItemsViewController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="BrowseViewController" storyboardIdentifier="BrowseViewController" id="of6-NG-2kb" customClass="ItemsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Guw-8N-fy3"/>
                         <viewControllerLayoutGuide type="bottom" id="tPF-z2-Q0z"/>
@@ -167,15 +167,8 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="118" kind="show" identifier="NavigateToItemDetailSegue" id="152"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="of6-NG-2kb" id="LX2-wM-Mg8"/>
-                                    <outlet property="delegate" destination="of6-NG-2kb" id="626-7u-28N"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -248,7 +241,7 @@
         <!--New Item-->
         <scene sceneID="2247">
             <objects>
-                <viewController title="New Item" id="2248" customClass="ItemNewViewController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="ItemNewViewController" storyboardIdentifier="ItemNewViewController" title="New Item" id="2248" customClass="ItemNewViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2245"/>
                         <viewControllerLayoutGuide type="bottom" id="2246"/>
@@ -257,26 +250,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2329">
-                                <rect key="frame" x="28" y="102" width="430" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2329">
+                                <rect key="frame" x="28" y="58" width="327" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item Description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2343">
-                                <rect key="frame" x="28" y="168" width="430" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item Description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2343">
+                                <rect key="frame" x="28" y="126" width="327" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2344">
-                                <rect key="frame" x="30" y="73" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2345">
-                                <rect key="frame" x="30" y="147" width="190" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2344">
+                                <rect key="frame" x="28" y="29" width="33.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -287,18 +272,28 @@
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2345">
+                                <rect key="frame" x="28" y="97" width="88" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="2329" firstAttribute="top" secondItem="2245" secondAttribute="bottom" constant="38" id="2383"/>
                             <constraint firstItem="2329" firstAttribute="leading" secondItem="2249" secondAttribute="leading" constant="28" id="2384"/>
                             <constraint firstAttribute="trailing" secondItem="2329" secondAttribute="trailing" constant="20" id="2385"/>
-                            <constraint firstItem="2343" firstAttribute="top" secondItem="2245" secondAttribute="bottom" constant="112" id="2393"/>
                             <constraint firstItem="2343" firstAttribute="leading" secondItem="2249" secondAttribute="leading" constant="28" id="2394"/>
                             <constraint firstAttribute="trailing" secondItem="2343" secondAttribute="trailing" constant="20" id="2395"/>
-                            <constraint firstItem="2352" firstAttribute="top" secondItem="2245" secondAttribute="bottom" constant="156" id="2440"/>
                             <constraint firstItem="2352" firstAttribute="leading" secondItem="2249" secondAttribute="leading" constant="30" id="2441"/>
                             <constraint firstAttribute="trailing" secondItem="2352" secondAttribute="trailing" constant="20" id="2442"/>
+                            <constraint firstItem="2343" firstAttribute="top" secondItem="2345" secondAttribute="bottom" constant="8" id="0Qu-pg-JmF"/>
+                            <constraint firstItem="2329" firstAttribute="top" secondItem="2344" secondAttribute="bottom" constant="8" id="9YS-NK-Hbf"/>
+                            <constraint firstItem="2352" firstAttribute="top" secondItem="2343" secondAttribute="bottom" constant="20" id="BRp-Ch-uUp"/>
+                            <constraint firstItem="2345" firstAttribute="leading" secondItem="2343" secondAttribute="leading" id="cYw-Rv-snm"/>
+                            <constraint firstItem="2344" firstAttribute="leading" secondItem="2329" secondAttribute="leading" id="lM1-aG-B2i"/>
+                            <constraint firstItem="2343" firstAttribute="top" secondItem="2329" secondAttribute="bottom" constant="38" id="rEn-oh-w2c"/>
                         </constraints>
                     </view>
                     <connections>

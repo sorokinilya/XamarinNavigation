@@ -32,7 +32,7 @@ namespace NavTest.iOS
 
         public void ShowItems()
         {
-            var selected = this.tabBarController.SelectedIndex == 0; 
+            var selected = this.tabBarController.SelectedIndex == 0;
             if (!selected)
             {
                 this.tabBarController.SelectedIndex = 0;
@@ -43,26 +43,28 @@ namespace NavTest.iOS
 
         public void ShowNewItem()
         {
-            if (this.tabBarController.SelectedIndex != 0)
+            var selected = this.tabBarController.SelectedIndex == 0;
+            if (!selected)
             {
-            this.tabBarController.SelectedIndex = 0;
+                this.tabBarController.SelectedIndex = 0;
             }
             var navigationController = tabBarController.SelectedViewController as UINavigationController;
-            if (this.PopToViewController(navigationController, typeof(ItemNewViewController), true) == false)
+            if (this.PopToViewController(navigationController, typeof(ItemNewViewController), selected) == false)
             {
                 navigationController.PopToRootViewController(false);
-                navigationController.PushViewController(this.makeItemNewViewController(), true);
+                navigationController.PushViewController(this.makeItemNewViewController(), selected);
             }
         }
 
         public void ShowAbout()
         {
-            if (this.tabBarController.SelectedIndex != 1)
+            var selected = this.tabBarController.SelectedIndex == 1;
+            if (!selected)
             {
                 this.tabBarController.SelectedIndex = 1;
             }
             var navigationController = tabBarController.SelectedViewController as UINavigationController;
-            navigationController.PopToRootViewController(false);
+            navigationController.PopToRootViewController(selected);
         }
 
         public void ShowWeb(string url)

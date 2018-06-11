@@ -143,6 +143,7 @@
       <DependentUpon>BrowseViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewControllers\Browse\ItemsDataSource.cs" />
+    <Compile Include="ViewControllers\TabBarController\TabBarDelegate.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Entitlements.plist" />

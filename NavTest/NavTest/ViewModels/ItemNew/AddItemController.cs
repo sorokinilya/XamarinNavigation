@@ -11,6 +11,7 @@ namespace NavTest.ViewModels.ItemNew
             ViewModel.AddItem = async (item) =>
             {
                 await ServiceLayer.Instance.DataStore.AddItemAsync(item);
+                router.ShowItems();
             };
         }
     }

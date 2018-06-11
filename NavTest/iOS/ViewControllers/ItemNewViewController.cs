@@ -24,7 +24,6 @@ namespace NavTest.iOS
                     Description = txtDesc.Text
                 };
                 ViewModel.AddItem(item);
-                ViewModel.ShowItems();
             };
         }
     }

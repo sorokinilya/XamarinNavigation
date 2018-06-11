@@ -14,9 +14,11 @@ namespace NavTest.iOS.ViewControllers.TabBarController
             this.showAbout = showAbout;
         }
 
-        public override void ViewControllerSelected(UITabBarController tabBarController, UIViewController viewController)
+        public override bool ShouldSelectViewController(UITabBarController tabBarController, UIViewController viewController)
         {
-            if (tabBarController.SelectedIndex == 0)
+            var navigationController = viewController as UINavigationController;
+            var vc = navigationController.ViewControllers[0] as BrowseViewController;
+            if (vc != null)
             {
                 this.showItems();
             }
@@ -24,6 +26,7 @@ namespace NavTest.iOS.ViewControllers.TabBarController
             {
                 this.showAbout();
             }
+            return false;
         }
     }
 }

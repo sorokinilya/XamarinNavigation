@@ -5,7 +5,7 @@ namespace NavTest
 {
     public class BaseViewModel<T> : IBaseViewModel where T : class, new()
     {
-        public T UIModel { get; private set; } = new T();
+        public T Resources { get; private set; } = new T();
 
         public Action ShowItems { get; set; }
         public Action ShowAbout { get; set; }

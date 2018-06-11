@@ -1,10 +1,10 @@
 ﻿using System;
 namespace NavTest.ViewModels.About
 {
-    public class AboutUIModel
+    public class AboutResourcesModel
     {
         public string Title { get; internal set; }
 
-        public AboutUIModel() { }
+        public AboutResourcesModel() { }
     }
 }

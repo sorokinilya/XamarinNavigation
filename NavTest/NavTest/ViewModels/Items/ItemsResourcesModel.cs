@@ -1,9 +1,9 @@
 ﻿using System;
 namespace NavTest.ViewModels.Items
 {
-    public class ItemsUIModel
+    public class ItemsResourcesModel
     {
         public string Title { get; internal set; }
-        public ItemsUIModel() { }
+        public ItemsResourcesModel() { }
     }
 }

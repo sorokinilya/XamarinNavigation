@@ -16,13 +16,13 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\BaseRouter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\ServiceLayerExtension.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\About\AboutViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\About\AboutUIModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\About\AboutResourcesModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Items\ItemsViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Items\ItemsUIModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Items\ItemsResourcesModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemDetail\ItemDetailViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemDetail\ItemDetailUIModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemDetail\ItemDetailResourcesModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemNew\AddItemViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemNew\AddItemUIModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemNew\AddItemResourcesModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Base\BaseViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Base\BaseController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Base\IBaseViewModel.cs" />

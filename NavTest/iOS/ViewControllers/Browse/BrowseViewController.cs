@@ -11,8 +11,6 @@ namespace NavTest.iOS
 {
     public partial class BrowseViewController : BaseViewController<ItemsViewModel>
     {
-
-
         UIRefreshControl refreshControl;
 
         internal BrowseViewController(IntPtr handle) : base(handle)
@@ -29,16 +27,16 @@ namespace NavTest.iOS
             this.refreshControl.ValueChanged += RefreshControl_ValueChanged;
             this.tableView.Add(refreshControl);
             this.tableView.Source = new ItemsDataSource(ViewModel.Items);
-            this.btnAddItem.TouchUpInside += (sender, ea) =>  ViewModel.ShowNewItem();
+            this.btnAddItem.TouchUpInside += (sender, ea) => ViewModel.ShowNewItem();
             this.ViewModel.Items.CollectionChanged += this.OnCollectionChanged;
             Title = ViewModel.UIModel.Title;
         }
 
 
-            void RefreshControl_ValueChanged(object sender, EventArgs e)
-            {
-                    this.ViewModel.ReloadItemsAction();
-            }
+        void RefreshControl_ValueChanged(object sender, EventArgs e)
+        {
+            this.ViewModel.ReloadItemsAction();
+        }
 
         //    void IsBusy_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         //    {
@@ -60,9 +58,9 @@ namespace NavTest.iOS
         //    }
 
         void OnCollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
-            {
-                InvokeOnMainThread(() => tableView.ReloadData());
-            }
+        {
+            InvokeOnMainThread(() => tableView.ReloadData());
+        }
         //}
 
     }

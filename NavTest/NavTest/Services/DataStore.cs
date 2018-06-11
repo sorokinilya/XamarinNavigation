@@ -15,7 +15,7 @@ namespace NavTest
             items = new List<Item>();
         }
 
-        public void Initialize() 
+        public void Initialize()
         {
             var _items = new List<Item>
             {

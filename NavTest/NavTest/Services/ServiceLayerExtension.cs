@@ -15,8 +15,9 @@ namespace NavTest.Services
         {
             get
             {
-                return this.Get<DataStore>();   
+                return this.Get<DataStore>();
             }
         }
     }
 }
+

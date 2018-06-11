@@ -3,7 +3,7 @@ using NavTest.Services;
 
 namespace NavTest.Droid
 {
-    public class Router : IRouter
+    public class Router : BaseRouter
     {
         public Router()
         {

@@ -6,31 +6,30 @@ using NavTest.ViewModels.Items;
 using UIKit;
 using Foundation;
 using NavTest.ViewModels.ItemNew;
+using System.Diagnostics.Contracts;
 
 namespace NavTest.iOS
 {
-    public class Router : IRouter
+    public class Router : BaseRouter
     {
         private readonly TabBarViewController tabBarController;
 
         private readonly UIStoryboard mainStoryboard = UIStoryboard.FromName("Main", null);
 
-        public Router(TabBarViewController tabBarController)
+        public Router(TabBarViewController tabBarController) : base()
         {
             this.tabBarController = tabBarController;
         }
 
-        public void Initialize()
+        public override void Initialize()
         {
-            var controller = new TabBarController(this);
+            var controller = this.GetController(() => new TabBarController(this));
             this.tabBarController.ViewModel = controller.ViewModel;
-            var items = this.makeItemsViewController();
-            var about = this.makeAboutViewController();
-            UIViewController[] controllers = { this.makeNavigationController(items), makeNavigationController(about) };
+            UIViewController[] controllers = { this.makeNavigationController(), this.makeNavigationController() };
             this.tabBarController.ViewControllers = controllers;
         }
 
-        public void ShowItems()
+        protected override void ShowItems(ItemsViewModel viewModel)
         {
             var selected = this.tabBarController.SelectedIndex == 0;
             if (!selected)
@@ -38,10 +37,41 @@ namespace NavTest.iOS
                 this.tabBarController.SelectedIndex = 0;
             }
             var navigationController = tabBarController.SelectedViewController as UINavigationController;
-            navigationController.PopToRootViewController(selected);
+            if (navigationController.ViewControllers.Length == 0)
+            {
+                var rootViewController = this.mainStoryboard.InstantiateViewController("BrowseViewController") as BrowseViewController;
+                rootViewController.ViewModel = viewModel;
+                UIViewController[] viewControllers = { rootViewController };
+                navigationController.ViewControllers = viewControllers;
+            }
+            else
+            {
+                navigationController.PopToRootViewController(selected);
+            }
         }
 
-        public void ShowNewItem()
+        protected override void ShowAbout(AboutViewModel viewModel)
+        {
+            var selected = this.tabBarController.SelectedIndex == 1;
+            if (!selected)
+            {
+                this.tabBarController.SelectedIndex = 1;
+            }
+            var navigationController = tabBarController.SelectedViewController as UINavigationController;
+            if (navigationController.ViewControllers.Length == 0)
+            {
+                var rootViewController = this.mainStoryboard.InstantiateViewController("AboutViewController") as AboutViewController;
+                rootViewController.ViewModel = viewModel;
+                UIViewController[] viewControllers = { rootViewController };
+                navigationController.ViewControllers = viewControllers;
+            }
+            else
+            {
+                navigationController.PopToRootViewController(selected);
+            }
+        }
+
+        protected override void ShowNewItem(AddItemViewModel viewModel)
         {
             var selected = this.tabBarController.SelectedIndex == 0;
             if (!selected)
@@ -52,22 +82,13 @@ namespace NavTest.iOS
             if (this.PopToViewController(navigationController, typeof(ItemNewViewController), selected) == false)
             {
                 navigationController.PopToRootViewController(false);
-                navigationController.PushViewController(this.makeItemNewViewController(), selected);
+                var viewController = this.mainStoryboard.InstantiateViewController("ItemNewViewController") as ItemNewViewController;
+                viewController.ViewModel = viewModel;
+                navigationController.PushViewController(viewController, selected);
             }
         }
 
-        public void ShowAbout()
-        {
-            var selected = this.tabBarController.SelectedIndex == 1;
-            if (!selected)
-            {
-                this.tabBarController.SelectedIndex = 1;
-            }
-            var navigationController = tabBarController.SelectedViewController as UINavigationController;
-            navigationController.PopToRootViewController(selected);
-        }
-
-        public void ShowWeb(string url)
+        public override void ShowWeb(string url)
         {
             UIApplication.SharedApplication.OpenUrl(new NSUrl(url));
         }
@@ -85,38 +106,9 @@ namespace NavTest.iOS
             return false;
         }
 
-        private UIViewController makeItemNewViewController()
-        {
-            var viewController = this.mainStoryboard.InstantiateViewController("ItemNewViewController") as ItemNewViewController;
-            var controller = new AddItemController(this);
-            viewController.controller = controller;
-            viewController.ViewModel = controller.ViewModel;
-            return viewController;
-        }
-
-        private UIViewController makeItemsViewController()
-        {
-            var viewController = this.mainStoryboard.InstantiateViewController("BrowseViewController") as BrowseViewController;
-            var controller = new ItemsController(this);
-            viewController.controller = controller;
-            viewController.ViewModel = controller.ViewModel;
-            return viewController;
-        }
-
-        private UIViewController makeAboutViewController()
-        {
-            var viewController = this.mainStoryboard.InstantiateViewController("AboutViewController") as AboutViewController;
-            var controller = new AboutController(this);
-            viewController.controller = controller;
-            viewController.ViewModel = controller.ViewModel;
-            return viewController;
-        }
-
-        private UINavigationController makeNavigationController(UIViewController rootViewController)
+        private UINavigationController makeNavigationController()
         {
             var viewController = this.mainStoryboard.InstantiateViewController("NavigationController") as UINavigationController;
-            UIViewController[] viewControllers = { rootViewController };
-            viewController.ViewControllers = viewControllers;
             return viewController;
         }
     }

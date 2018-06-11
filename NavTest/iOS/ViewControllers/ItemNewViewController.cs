@@ -16,15 +16,30 @@ namespace NavTest.iOS
         {
             base.ViewDidLoad();
 
-            btnSaveItem.TouchUpInside += (sender, e) =>
+        }
+
+        public override void ViewWillAppear(bool animated)
+        {
+            base.ViewWillAppear(animated);
+
+            this.btnSaveItem.TouchUpInside += this.HandleAddButton;
+        }
+
+        public override void ViewDidDisappear(bool animated)
+        {
+            base.ViewDidDisappear(animated);
+
+            this.btnSaveItem.TouchUpInside -= this.HandleAddButton;
+        }
+
+        private void HandleAddButton(object sender, EventArgs ea)
+        {
+            var item = new Item
             {
-                var item = new Item
-                {
-                    Text = txtTitle.Text,
-                    Description = txtDesc.Text
-                };
-                ViewModel.AddItem(item);
+                Text = txtTitle.Text,
+                Description = txtDesc.Text
             };
+            this.ViewModel.AddItem(item);
         }
     }
 }

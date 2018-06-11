@@ -24,6 +24,6 @@ namespace NavTest.iOS
             //AboutTextView.Text = "This app is written in C# and native APIs using the Xamarin Platform. It shares code with its iOS, Android, & Windows versions.";
         }
 
-        partial void ReadMoreButton_TouchUpInside(UIButton sender) => ViewModel.ShowWebPage();
+        partial void ReadMoreButton_TouchUpInside(UIButton sender) => this.ViewModel.ShowWebPage();
     }
 }

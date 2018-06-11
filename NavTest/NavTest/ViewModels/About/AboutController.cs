@@ -4,9 +4,9 @@ using NavTest.ViewModels.Base;
 
 namespace NavTest.ViewModels.About
 {
-    public class AboutController : BaseController<AboutViewModel>
+    internal class AboutController : BaseController<AboutViewModel>
     {
-        public AboutController(IRouter router) : base(router)
+        internal AboutController(BaseRouter router) : base(router)
         {
             ViewModel.ShowWebPage = () =>
             {

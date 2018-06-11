@@ -3,11 +3,11 @@ namespace NavTest.Services
 {
     public partial class ServiceLayer
     {
-        public IRouter Router
+        public BaseRouter Router
         {
             get
             {
-                return this.Get<IRouter>();
+                return this.Get<BaseRouter>();
             }
         }
 

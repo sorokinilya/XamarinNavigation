@@ -4,9 +4,9 @@ using NavTest.ViewModels.Base;
 
 namespace NavTest.ViewModels.ItemNew
 {
-    public class AddItemController : BaseController<AddItemViewModel>
+    internal class AddItemController : BaseController<AddItemViewModel>
     {
-        public AddItemController(IRouter router) : base(router)
+        internal AddItemController(BaseRouter router) : base(router)
         {
             ViewModel.AddItem = async (item) =>
             {

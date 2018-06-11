@@ -7,7 +7,7 @@ namespace NavTest.ViewModels.Base
     {
         public T ViewModel { get; protected set; }
 
-        public BaseController(IRouter router)
+        protected BaseController(BaseRouter router)
         {
             this.ViewModel = new T();
 
@@ -23,6 +23,10 @@ namespace NavTest.ViewModels.Base
             this.ViewModel.ShowNewItem = () =>
             {
                 router.ShowNewItem();
+            };
+            this.ViewModel.Release = () =>
+            {
+                router.ReleaseConroller(this.GetType());
             };
         }
     }

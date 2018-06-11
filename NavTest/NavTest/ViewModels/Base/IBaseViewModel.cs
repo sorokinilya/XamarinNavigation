@@ -6,5 +6,6 @@ namespace NavTest.ViewModels.Base
         Action ShowItems { get; set; }
         Action ShowAbout { get; set; }
         Action ShowNewItem { get; set; }
+        Action Release { get; set; }
     }
 }

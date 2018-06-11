@@ -4,10 +4,9 @@ using UIKit;
 
 namespace NavTest.iOS.ViewControllers.TabBarController
 {
-    public class TabBarController : BaseController<TabBarViewModel>
+    internal class TabBarController : BaseController<TabBarViewModel>
     {
-        public TabBarController(IRouter router) :
-        base(router)
+        internal TabBarController(BaseRouter router) : base(router)
         {
         }
     }

@@ -13,7 +13,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\DataStore.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\ServiceLayer.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\IRouter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\BaseRouter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\ServiceLayerExtension.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\About\AboutViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\About\AboutUIModel.cs" />

@@ -5,7 +5,7 @@ namespace NavTest
     public class Core
     {
 
-        public static void Initialize(IRouter router)
+        public static void Initialize(BaseRouter router)
         {
             DataStore store = new DataStore();
             ServiceLayer.Instance.Register(store);

@@ -16,9 +16,7 @@ namespace NavTest.iOS.ViewControllers.TabBarController
 
         public override bool ShouldSelectViewController(UITabBarController tabBarController, UIViewController viewController)
         {
-            var navigationController = viewController as UINavigationController;
-            var vc = navigationController.ViewControllers[0] as BrowseViewController;
-            if (vc != null)
+            if (tabBarController.SelectedIndex != 0)
             {
                 this.showItems();
             }

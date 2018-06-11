@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
 using NavTest.ViewModels.Base;
 
 namespace NavTest
@@ -13,6 +10,12 @@ namespace NavTest
         public Action ShowItems { get; set; }
         public Action ShowAbout { get; set; }
         public Action ShowNewItem { get; set; }
+        public Action Release { get; set; }
 
+
+        //~BaseViewModel()
+        //{
+        //    var a = 10;
+        //}
     }
 }

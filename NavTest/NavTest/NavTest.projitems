@@ -29,6 +29,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Items\ItemsController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\About\AboutController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemNew\AddItemController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Items\Item.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)ViewModels\About\" />

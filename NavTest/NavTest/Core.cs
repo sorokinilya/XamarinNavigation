@@ -1,4 +1,5 @@
 ﻿using NavTest.Services;
+using NavTest.Services.Store;
 
 namespace NavTest
 {

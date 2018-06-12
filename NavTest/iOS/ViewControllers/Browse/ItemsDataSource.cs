@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using Foundation;
+using NavTest.ViewModels.Items;
 using UIKit;
 
 namespace NavTest.iOS.ViewControllers.Browse
@@ -24,8 +25,8 @@ namespace NavTest.iOS.ViewControllers.Browse
             var cell = tableView.DequeueReusableCell(CELL_IDENTIFIER, indexPath);
 
             var item = this.Items[indexPath.Row];
-            cell.TextLabel.Text = item.Text;
-            cell.DetailTextLabel.Text = item.Description;
+            cell.TextLabel.Text = item.text;
+            cell.DetailTextLabel.Text = item.description;
             cell.LayoutMargins = UIEdgeInsets.Zero;
 
             return cell;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NavTest.Services.Store;
+
 namespace NavTest.Services
 {
     public partial class ServiceLayer

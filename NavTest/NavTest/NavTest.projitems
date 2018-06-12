@@ -9,8 +9,6 @@
     <Import_RootNamespace>NavTest</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Item.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\DataStore.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\ServiceLayer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\BaseRouter.cs" />
@@ -30,6 +28,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\About\AboutController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemNew\AddItemController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Items\Item.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\Store\DataStore.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\Store\Item.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemDetail\Item.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemNew\Item.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)ViewModels\About\" />
@@ -37,5 +39,7 @@
     <Folder Include="$(MSBuildThisFileDirectory)ViewModels\ItemDetail\" />
     <Folder Include="$(MSBuildThisFileDirectory)ViewModels\ItemNew\" />
     <Folder Include="$(MSBuildThisFileDirectory)ViewModels\Base\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Services\Store\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Models\" />
   </ItemGroup>
 </Project>

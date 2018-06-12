@@ -39,8 +39,8 @@ namespace NavTest.iOS
         {
             base.ViewDidLoad();
 
-            TabBar.Items[0].Title = ViewModel.Resources.browseTitle;
-            TabBar.Items[1].Title = ViewModel.Resources.aboutTitle;
+            TabBar.Items[0].Title = ViewModel.resources.browseTitle;
+            TabBar.Items[1].Title = ViewModel.resources.aboutTitle;
             this.Delegate = new TabBarDelegate(ViewModel.ShowItems, ViewModel.ShowAbout);
         }
     }

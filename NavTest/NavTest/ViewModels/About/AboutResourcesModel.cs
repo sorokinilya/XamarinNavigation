@@ -5,6 +5,6 @@ namespace NavTest.ViewModels.About
     {
         public string Title { get; internal set; }
 
-        public AboutResourcesModel() { }
+        internal AboutResourcesModel() { }
     }
 }

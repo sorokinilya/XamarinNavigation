@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Specialized;
-
-using Foundation;
 using NavTest.iOS.ViewControllers;
 using NavTest.iOS.ViewControllers.Browse;
 using NavTest.ViewModels.Items;
@@ -29,7 +27,7 @@ namespace NavTest.iOS
             this.tableView.Source = new ItemsDataSource(ViewModel.Items);
             this.btnAddItem.TouchUpInside += (sender, ea) => ViewModel.ShowNewItem();
             this.ViewModel.Items.CollectionChanged += this.OnCollectionChanged;
-            Title = ViewModel.Resources.Title;
+            Title = ViewModel.resources.Title;
         }
 
 

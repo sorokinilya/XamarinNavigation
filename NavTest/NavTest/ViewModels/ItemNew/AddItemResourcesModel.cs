@@ -5,6 +5,6 @@ namespace NavTest.ViewModels.ItemNew
     {
         public string Title { get; internal set; }
 
-        public AddItemResourcesModel() { }
+        internal AddItemResourcesModel() { }
     }
 }

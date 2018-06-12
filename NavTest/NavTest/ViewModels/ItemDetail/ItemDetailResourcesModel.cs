@@ -5,6 +5,6 @@ namespace NavTest.ViewModels.ItemDetail
     {
         public string Title { get; internal set; }
 
-        public ItemDetailResourcesModel() { }
+        internal ItemDetailResourcesModel() { }
     }
 }

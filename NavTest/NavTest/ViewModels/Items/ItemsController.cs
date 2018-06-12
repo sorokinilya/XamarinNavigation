@@ -1,4 +1,6 @@
-﻿using NavTest.Services;
+﻿using System.Threading.Tasks;
+using NavTest.Services;
+using NavTest.Services.Store;
 using NavTest.ViewModels.Base;
 
 namespace NavTest.ViewModels.Items
@@ -6,11 +8,22 @@ namespace NavTest.ViewModels.Items
     internal class ItemsController : BaseController<ItemsViewModel>
     {
 
-        // private DataStore DataStore { get; set; } = ServiceLayer.Instance.DataStore;
+        private DataStore dataStore = ServiceLayer.Instance.DataStore;
 
-        internal ItemsController(BaseRouter router) : base(router)
+        internal ItemsController(BaseRouter router) : base(router, new ItemsViewModel())
         {
+            Task.Run(async () =>
+            {
+                var items = await dataStore.GetItemsAsync();
+                foreach (var item in items)
+                {
+                    this.ViewModel.Items.Add(new Item(item.Id, item.Text, item.Description));
+                }
+            });
 
+            base.ViewModel.ReloadItemsAction = () =>
+            {
+            };
         }
     }
 }

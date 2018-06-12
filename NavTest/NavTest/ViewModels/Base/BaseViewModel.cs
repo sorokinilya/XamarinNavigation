@@ -3,16 +3,19 @@ using NavTest.ViewModels.Base;
 
 namespace NavTest
 {
-    public class BaseViewModel<T> : IBaseViewModel where T : class, new()
+    public class BaseViewModel<T> : IBaseViewModel
     {
-        public T Resources { get; private set; } = new T();
+        public T resources;
 
         public Action ShowItems { get; set; }
         public Action ShowAbout { get; set; }
         public Action ShowNewItem { get; set; }
         public Action Release { get; set; }
 
-
+        protected BaseViewModel(T resources)
+        {
+            this.resources = resources;
+        }
         //~BaseViewModel()
         //{
         //    var a = 10;

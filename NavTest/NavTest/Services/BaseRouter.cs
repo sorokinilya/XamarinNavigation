@@ -51,7 +51,6 @@ namespace NavTest.Services
             var controller = this.registeredContrellers.GetValueOrDefault(type);
             if (controller == null)
             {
-                object[] args = { this };
                 controller = make();
                 this.registeredContrellers[type] = controller;
             }

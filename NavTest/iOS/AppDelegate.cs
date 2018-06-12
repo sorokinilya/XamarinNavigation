@@ -1,4 +1,6 @@
-﻿using Foundation;
+﻿using System;
+using System.Collections.Generic;
+using Foundation;
 using NavTest.Services;
 using UIKit;
 
@@ -21,7 +23,12 @@ namespace NavTest.iOS
         {
             var root = Window.RootViewController as TabBarViewController;
             var router = new Router(root);
-            Core.Initialize(router);
+            Core.Initialize(router,
+                            (rgb) => UIColor.FromRGB((rgb & 0xFF000000) >> 24, 
+                                                     (rgb & 0x00FF0000) >> 16, 
+                             (rgb & 0x0000FF00) >> 8)
+            ,
+                            new Dictionary<Color, Int32>());
             router.ShowItems();
             return true;
         }

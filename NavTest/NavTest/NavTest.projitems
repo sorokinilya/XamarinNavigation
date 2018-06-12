@@ -32,6 +32,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\Store\Item.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemDetail\Item.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemNew\Item.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\Resources\ResourcesService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\Resources\Colors.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)ViewModels\About\" />
@@ -41,5 +43,6 @@
     <Folder Include="$(MSBuildThisFileDirectory)ViewModels\Base\" />
     <Folder Include="$(MSBuildThisFileDirectory)Services\Store\" />
     <Folder Include="$(MSBuildThisFileDirectory)Models\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Services\Resources\" />
   </ItemGroup>
 </Project>

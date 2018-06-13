@@ -5,7 +5,9 @@ namespace NavTest.ViewModels.ItemNew
     {
         public string Title { get; internal set; }
 
-        public string Description { get; internal set; }
+        public string ItemTitle { get; internal set; }
+
+        public string ItemDescription { get; internal set; }
 
         public Int32 TitleColor { get; internal set; }
 

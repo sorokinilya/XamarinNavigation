@@ -34,7 +34,7 @@ namespace NavTest.Services.Store
         public async Task<bool> AddItemAsync(Item item)
         {
             items.Add(item);
-
+            await Task.Delay(2500);
             return await Task.FromResult(true);
         }
 
@@ -43,7 +43,7 @@ namespace NavTest.Services.Store
             var _item = items.Where((Item arg) => arg.Id == item.Id).FirstOrDefault();
             items.Remove(_item);
             items.Add(item);
-
+            await Task.Delay(2700);
             return await Task.FromResult(true);
         }
 
@@ -51,17 +51,19 @@ namespace NavTest.Services.Store
         {
             var _item = items.Where((Item arg) => arg.Id == id).FirstOrDefault();
             items.Remove(_item);
-
+            await Task.Delay(2500);
             return await Task.FromResult(true);
         }
 
         public async Task<Item> GetItemAsync(int id)
         {
+            await Task.Delay(2500);
             return await Task.FromResult(items.FirstOrDefault(s => s.Id == id));
         }
 
         public async Task<IEnumerable<Item>> GetItemsAsync()
         {
+            await Task.Delay(2500);
             return await Task.FromResult(items);
         }
     }

@@ -17,9 +17,12 @@ namespace NavTest.iOS
         {
             base.ViewDidLoad();
 
-            this.titleLabel.Text = this.ViewModel.resources.Title;
+            this.Title = this.ViewModel.resources.Title;
+
+            this.titleLabel.Text = this.ViewModel.resources.ItemTitle;
             this.titleLabel.TextColor = this.ViewModel.resources.TitleColor.ToUIColor();
-            this.descriptionLabel.Text = this.ViewModel.resources.Description;
+
+            this.descriptionLabel.Text = this.ViewModel.resources.ItemDescription;
             this.descriptionLabel.TextColor = this.ViewModel.resources.DescriptionColor.ToUIColor();
         }
 

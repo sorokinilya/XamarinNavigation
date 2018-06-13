@@ -1,4 +1,5 @@
 ﻿using NavTest.Services;
+using NavTest.Services.Resources;
 using NavTest.Services.Store;
 using NavTest.ViewModels.Base;
 
@@ -13,8 +14,9 @@ namespace NavTest.ViewModels.ItemNew
         {
             base.viewModel.resources.TitleColor = base.resourcesService.GetColor(Color.Main);
             base.viewModel.resources.DescriptionColor = base.resourcesService.GetColor(Color.Tint);
-            base.viewModel.resources.Title = "Title";
-            base.viewModel.resources.Description = "De";
+            base.viewModel.resources.Title = base.resourcesService.GetString(Localized.AI_Title);
+            base.viewModel.resources.ItemTitle = base.resourcesService.GetString(Localized.AI_ItemTitle);
+            base.viewModel.resources.ItemDescription = base.resourcesService.GetString(Localized.AI_ItemDescription);
 
             base.viewModel.AddItem = async (item) =>
             {

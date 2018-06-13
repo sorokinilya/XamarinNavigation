@@ -10,19 +10,18 @@ namespace NavTest
     {
 
         public static void Initialize(BaseRouter router,
-                                         Dictionary<Color, Int32> colors)
+                                      BaseResourcesService resourcesService = null)
         {
             var serviceLayer = ServiceLayer.Instance;
             DataStore store = new DataStore();
             serviceLayer.Register(store);
             serviceLayer.Register(router);
-            var newColors = ColorfMethods.defaultColors;
-            foreach (KeyValuePair<Color, Int32> pair in colors)
+            if (resourcesService == null)
             {
-                newColors[pair.Key] = pair.Value;
+                resourcesService = new BaseResourcesService();
             }
-            ResourcesService resourcesService = new ResourcesService(newColors);
             serviceLayer.Register(resourcesService);
+            resourcesService.Initialize();
             store.Initialize();
             router.Initialize();
         }

@@ -19,7 +19,7 @@ namespace NavTest.iOS.ViewControllers
                 T target;
                 if (!viewModel.TryGetTarget(out target))
                 {
-                    Debug.Assert(false);
+                    Debug.Assert(false, "ViewModel is released");
                 }
                 return target;
             }
@@ -35,14 +35,14 @@ namespace NavTest.iOS.ViewControllers
 
         ~BaseViewController()
         {
-            ViewModel.Release();
+            ViewModel.ReleaseModel();
         }
 
         public override void ViewDidUnload()
         {
             base.ViewDidUnload();
 
-            ViewModel.Release();
+            ViewModel.ReleaseModel();
         }
     }
 }

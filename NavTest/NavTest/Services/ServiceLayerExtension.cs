@@ -21,11 +21,11 @@ namespace NavTest.Services
             }
         }
 
-        internal ResourcesService ResourcesService
+        internal BaseResourcesService ResourcesService
         {
             get
             {
-                return this.Get<ResourcesService>();
+                return this.Get<BaseResourcesService>();
             }
         }
     }

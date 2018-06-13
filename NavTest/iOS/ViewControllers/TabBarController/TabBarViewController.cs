@@ -32,7 +32,7 @@ namespace NavTest.iOS
 
         ~TabBarViewController()
         {
-            this.ViewModel.Release();
+            this.ViewModel.ReleaseModel();
         }
 
         public override void ViewDidLoad()

@@ -7,12 +7,14 @@ namespace NavTest.ViewModels.Base
     public class BaseController<T> where T : class, IBaseViewModel
     {
         public readonly T viewModel;
-        protected readonly ResourcesService resourcesService;
+        protected readonly BaseResourcesService resourcesService;
 
         protected BaseController(BaseRouter router, T viewModel)
         {
             this.viewModel = viewModel;
             this.resourcesService = ServiceLayer.Instance.ResourcesService;
+
+            this.viewModel.IsLoading = false;
             this.viewModel.ShowItems = () =>
             {
                 router.ShowItems();
@@ -26,7 +28,7 @@ namespace NavTest.ViewModels.Base
             {
                 router.ShowNewItem();
             };
-            this.viewModel.Release = () =>
+            this.viewModel.ReleaseModel = () =>
             {
                 router.ReleaseConroller(this.GetType());
             };

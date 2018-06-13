@@ -10,14 +10,3 @@ public enum Color : byte
     Shadow,
     Background
 }
-
-static class ColorfMethods
-{
-    internal static Dictionary<Color, Int32> defaultColors = new Dictionary<Color, Int32>
-    {
-        {Color.Main, 0x0000ff},
-        {Color.Tint, 0xff0000},
-        {Color.Shadow, 0xfefefe},
-        {Color.Background, 0xffffff}
-    };
-}

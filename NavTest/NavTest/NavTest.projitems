@@ -32,9 +32,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\Store\Item.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemDetail\Item.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemNew\Item.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\Resources\ResourcesService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\Resources\BaseResourcesService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Resources\Colors.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\Resources\LocalizedStrings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\Resources\Localized.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)ViewModels\About\" />

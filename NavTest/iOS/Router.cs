@@ -7,6 +7,7 @@ using UIKit;
 using Foundation;
 using NavTest.ViewModels.ItemNew;
 using System.Diagnostics.Contracts;
+using System.Diagnostics;
 
 namespace NavTest.iOS
 {
@@ -23,6 +24,7 @@ namespace NavTest.iOS
 
         public override void Initialize()
         {
+            Debug.Assert(NSThread.IsMain, "Navigation from second thread" + new StackTrace().GetFrame(1).GetMethod().Name);
             var controller = this.GetController(() => new TabBarController(this));
             this.tabBarController.ViewModel = controller.viewModel;
             UIViewController[] controllers = { this.makeNavigationController(), this.makeNavigationController() };
@@ -31,6 +33,7 @@ namespace NavTest.iOS
 
         protected override void ShowItems(ItemsViewModel viewModel)
         {
+            Debug.Assert(NSThread.IsMain, "Navigation from second thread" + new StackTrace().GetFrame(1).GetMethod().Name);
             var selected = this.tabBarController.SelectedIndex == 0;
             if (!selected)
             {
@@ -52,6 +55,7 @@ namespace NavTest.iOS
 
         protected override void ShowAbout(AboutViewModel viewModel)
         {
+            Debug.Assert(NSThread.IsMain, "Navigation from second thread" + new StackTrace().GetFrame(1).GetMethod().Name);
             var selected = this.tabBarController.SelectedIndex == 1;
             if (!selected)
             {
@@ -73,6 +77,7 @@ namespace NavTest.iOS
 
         protected override void ShowNewItem(AddItemViewModel viewModel)
         {
+            Debug.Assert(NSThread.IsMain, "Navigation from second thread" + new StackTrace().GetFrame(1).GetMethod().Name);
             var selected = this.tabBarController.SelectedIndex == 0;
             if (!selected)
             {
@@ -90,6 +95,7 @@ namespace NavTest.iOS
 
         public override void ShowWeb(string url)
         {
+            Debug.Assert(NSThread.IsMain, "Navigation from second thread" + new StackTrace().GetFrame(1).GetMethod().Name);
             UIApplication.SharedApplication.OpenUrl(new NSUrl(url));
         }
 

@@ -34,6 +34,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemNew\Item.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Resources\ResourcesService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Resources\Colors.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\Resources\LocalizedStrings.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)ViewModels\About\" />

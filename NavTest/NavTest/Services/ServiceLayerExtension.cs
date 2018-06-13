@@ -1,4 +1,5 @@
-﻿using NavTest.Services.Store;
+﻿using NavTest.Services.Resources;
+using NavTest.Services.Store;
 
 namespace NavTest.Services
 {
@@ -17,6 +18,14 @@ namespace NavTest.Services
             get
             {
                 return this.Get<DataStore>();
+            }
+        }
+
+        internal ResourcesService ResourcesService
+        {
+            get
+            {
+                return this.Get<ResourcesService>();
             }
         }
     }

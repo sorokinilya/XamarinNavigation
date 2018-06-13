@@ -24,7 +24,7 @@ namespace NavTest.iOS
         public override void Initialize()
         {
             var controller = this.GetController(() => new TabBarController(this));
-            this.tabBarController.ViewModel = controller.ViewModel;
+            this.tabBarController.ViewModel = controller.viewModel;
             UIViewController[] controllers = { this.makeNavigationController(), this.makeNavigationController() };
             this.tabBarController.ViewControllers = controllers;
         }

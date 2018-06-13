@@ -8,7 +8,7 @@ namespace NavTest.ViewModels.About
     {
         internal AboutController(BaseRouter router) : base(router, new AboutViewModel())
         {
-            ViewModel.ShowWebPage = () =>
+            viewModel.ShowWebPage = () =>
             {
                 router.ShowWeb("https://google.com");
             };

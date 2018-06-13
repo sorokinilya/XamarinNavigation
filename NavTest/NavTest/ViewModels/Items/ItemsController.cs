@@ -17,11 +17,11 @@ namespace NavTest.ViewModels.Items
                 var items = await dataStore.GetItemsAsync();
                 foreach (var item in items)
                 {
-                    this.ViewModel.Items.Add(new Item(item.Id, item.Text, item.Description));
+                    this.viewModel.Items.Add(new Item(item.Id, item.Text, item.Description));
                 }
             });
 
-            base.ViewModel.ReloadItemsAction = () =>
+            base.viewModel.ReloadItemsAction = () =>
             {
             };
         }

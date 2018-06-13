@@ -11,8 +11,12 @@ namespace NavTest.ViewModels.ItemNew
 
         internal AddItemController(BaseRouter router) : base(router, new AddItemViewModel())
         {
+            base.viewModel.resources.TitleColor = base.resourcesService.GetColor(Color.Main);
+            base.viewModel.resources.DescriptionColor = base.resourcesService.GetColor(Color.Tint);
+            base.viewModel.resources.Title = "Title";
+            base.viewModel.resources.Description = "De";
 
-            base.ViewModel.AddItem = async (item) =>
+            base.viewModel.AddItem = async (item) =>
             {
                 var storeItem = new Services.Store.Item()
                 {

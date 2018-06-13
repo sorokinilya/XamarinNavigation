@@ -19,17 +19,17 @@ namespace NavTest.Services
 
         public void ShowItems()
         {
-            this.ShowItems(this.GetController(() => new ItemsController(this)).ViewModel);
+            this.ShowItems(this.GetController(() => new ItemsController(this)).viewModel);
         }
 
         public void ShowNewItem()
         {
-            this.ShowNewItem(this.GetController(() => new AddItemController(this)).ViewModel);
+            this.ShowNewItem(this.GetController(() => new AddItemController(this)).viewModel);
         }
 
         public void ShowAbout()
         {
-            this.ShowAbout(this.GetController(() => new AboutController(this)).ViewModel);
+            this.ShowAbout(this.GetController(() => new AboutController(this)).viewModel);
         }
 
         protected abstract void ShowItems(ItemsViewModel viewModel);

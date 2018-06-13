@@ -298,6 +298,8 @@
                     </view>
                     <connections>
                         <outlet property="btnSaveItem" destination="2352" id="name-outlet-2352"/>
+                        <outlet property="descriptionLabel" destination="2345" id="kWc-GD-l9d"/>
+                        <outlet property="titleLabel" destination="2344" id="6vl-CZ-00a"/>
                         <outlet property="txtDesc" destination="2343" id="name-outlet-2343"/>
                         <outlet property="txtTitle" destination="2329" id="name-outlet-2329"/>
                     </connections>

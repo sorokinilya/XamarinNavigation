@@ -24,7 +24,7 @@ namespace NavTest.iOS
             this.refreshControl = new UIRefreshControl();
             this.refreshControl.ValueChanged += RefreshControl_ValueChanged;
             this.tableView.Add(refreshControl);
-            this.tableView.Source = new ItemsDataSource(ViewModel.Items);
+            this.tableView.Source = new ItemsDataSource(ViewModel.Items, ViewModel.SelectedAction);
             this.btnAddItem.TouchUpInside += (sender, ea) => ViewModel.ShowNewItem();
             this.ViewModel.Items.CollectionChanged += this.OnCollectionChanged;
             Title = ViewModel.resources.Title;

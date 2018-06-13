@@ -8,6 +8,7 @@ using Foundation;
 using NavTest.ViewModels.ItemNew;
 using System.Diagnostics.Contracts;
 using System.Diagnostics;
+using NavTest.ViewModels.ItemDetail;
 
 namespace NavTest.iOS
 {
@@ -91,6 +92,12 @@ namespace NavTest.iOS
                 viewController.ViewModel = viewModel;
                 navigationController.PushViewController(viewController, selected);
             }
+        }
+
+
+        protected virtual void ShowItemDetail(ItemDetailViewModel viewModel)
+        {
+            
         }
 
         public override void ShowWeb(string url)

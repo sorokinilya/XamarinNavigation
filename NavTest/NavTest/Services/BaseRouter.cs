@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics.Contracts;
 using NavTest.ViewModels.About;
+using NavTest.ViewModels.ItemDetail;
 using NavTest.ViewModels.ItemNew;
 using NavTest.ViewModels.Items;
 
@@ -32,11 +33,20 @@ namespace NavTest.Services
             this.ShowAbout(this.GetController(() => new AboutController(this)).viewModel);
         }
 
+        public void ShowItemDetail(int id) 
+        {
+            var contoller = this.GetController(() => new ItemDetailController(this));
+            contoller.Id = id;
+            this.ShowItemDetail(contoller.viewModel);
+        }
+
         protected abstract void ShowItems(ItemsViewModel viewModel);
 
         protected abstract void ShowNewItem(AddItemViewModel viewModel);
 
         protected abstract void ShowAbout(AboutViewModel viewModel);
+
+        protected abstract void ShowItemDetail(ItemDetailViewModel viewModel); 
 
         public abstract void ShowWeb(string url);
 

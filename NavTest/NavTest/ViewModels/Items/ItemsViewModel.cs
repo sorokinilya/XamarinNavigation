@@ -6,7 +6,8 @@ namespace NavTest.ViewModels.Items
     public class ItemsViewModel : BaseViewModel<ItemsResourcesModel>
     {
         public ObservableCollection<Item> Items { get; set; } = new ObservableCollection<Item>();
-        public Action ReloadItemsAction { get; set; }
+        public Action ReloadItemsAction { get; internal set; }
+        public Action<int> SelectedAction { get; internal set;}
 
         internal ItemsViewModel() : base(new ItemsResourcesModel()) { }
 

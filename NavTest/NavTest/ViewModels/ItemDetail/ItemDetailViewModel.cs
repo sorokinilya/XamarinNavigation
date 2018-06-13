@@ -6,6 +6,8 @@ namespace NavTest.ViewModels.ItemDetail
     {
         public Item Item { get; set; }
 
-        internal ItemDetailViewModel() : base(new ItemDetailResourcesModel()) { }
+        internal ItemDetailViewModel() : base(new ItemDetailResourcesModel()) 
+        {
+        }
     }
 }

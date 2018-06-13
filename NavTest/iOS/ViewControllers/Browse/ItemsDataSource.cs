@@ -10,26 +10,33 @@ namespace NavTest.iOS.ViewControllers.Browse
     {
         static readonly NSString CELL_IDENTIFIER = new NSString("ITEM_CELL");
 
-        internal ObservableCollection<Item> Items { get; set; }
+        private ObservableCollection<Item> items;
+        private Action<int> action;
 
-        public ItemsDataSource(ObservableCollection<Item> items)
+        public ItemsDataSource(ObservableCollection<Item> items, Action<int> action)
         {
-            this.Items = items;
+            this.items = items;
+            this.action = action;
         }
 
-        public override nint RowsInSection(UITableView tableview, nint section) => this.Items.Count;
+        public override nint RowsInSection(UITableView tableview, nint section) => this.items.Count;
         public override nint NumberOfSections(UITableView tableView) => 1;
 
         public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
         {
             var cell = tableView.DequeueReusableCell(CELL_IDENTIFIER, indexPath);
 
-            var item = this.Items[indexPath.Row];
+            var item = this.items[indexPath.Row];
             cell.TextLabel.Text = item.text;
             cell.DetailTextLabel.Text = item.description;
             cell.LayoutMargins = UIEdgeInsets.Zero;
-
             return cell;
         }
+
+        public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
+        {
+            this.action(this.items[indexPath.Row].id);
+        }
+
     }
 }

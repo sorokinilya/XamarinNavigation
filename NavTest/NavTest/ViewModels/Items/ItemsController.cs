@@ -24,6 +24,11 @@ namespace NavTest.ViewModels.Items
             base.viewModel.ReloadItemsAction = () =>
             {
             };
+
+            base.viewModel.SelectedAction = (id) =>
+            {
+
+            };
         }
     }
 }

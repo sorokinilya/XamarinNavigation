@@ -135,9 +135,6 @@
     <Compile Include="ViewControllers\TabBarController\TabBarViewController.designer.cs">
       <DependentUpon>TabBarViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewControllers\TabBarController\TabBarViewModel.cs" />
-    <Compile Include="ViewControllers\TabBarController\TabBarUIModel.cs" />
-    <Compile Include="ViewControllers\TabBarController\TabBarController.cs" />
     <Compile Include="ViewControllers\Browse\BrowseViewController.cs" />
     <Compile Include="ViewControllers\Browse\BrowseViewController.designer.cs">
       <DependentUpon>BrowseViewController.cs</DependentUpon>

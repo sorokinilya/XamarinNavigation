@@ -36,6 +36,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\Resources\Colors.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Resources\Localized.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemDetail\ItemDetailController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TabBar\TabBarController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TabBar\TabBarUIModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TabBar\TabBarViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)ViewModels\About\" />
@@ -46,5 +49,6 @@
     <Folder Include="$(MSBuildThisFileDirectory)Services\Store\" />
     <Folder Include="$(MSBuildThisFileDirectory)Models\" />
     <Folder Include="$(MSBuildThisFileDirectory)Services\Resources\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\TabBar\" />
   </ItemGroup>
 </Project>

@@ -35,14 +35,9 @@ namespace NavTest.iOS.ViewControllers
 
         ~BaseViewController()
         {
-            ViewModel.ReleaseModel();
+            Debug.WriteLine("ViewController is released");
+            this.ViewModel.ReleaseModelAction();
         }
 
-        public override void ViewDidUnload()
-        {
-            base.ViewDidUnload();
-
-            ViewModel.ReleaseModel();
-        }
     }
 }

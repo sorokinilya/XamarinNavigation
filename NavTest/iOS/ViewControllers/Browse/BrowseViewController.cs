@@ -25,7 +25,7 @@ namespace NavTest.iOS
             this.refreshControl.ValueChanged += RefreshControl_ValueChanged;
             this.tableView.Add(refreshControl);
             this.tableView.Source = new ItemsDataSource(ViewModel.Items, ViewModel.SelectedAction);
-            this.btnAddItem.TouchUpInside += (sender, ea) => ViewModel.ShowNewItem();
+            this.btnAddItem.TouchUpInside += (sender, ea) => ViewModel.NewItemAction();
             this.ViewModel.Items.CollectionChanged += this.OnCollectionChanged;
             Title = ViewModel.resources.Title;
         }
@@ -33,7 +33,7 @@ namespace NavTest.iOS
 
         void RefreshControl_ValueChanged(object sender, EventArgs e)
         {
-            this.ViewModel.ReloadItemsAction();
+            this.ViewModel.ReloadAction();
         }
 
         //    void IsBusy_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)

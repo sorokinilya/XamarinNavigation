@@ -42,7 +42,7 @@ namespace NavTest.iOS
 
         private void HandleAddButton(object sender, EventArgs ea)
         {
-            this.ViewModel.AddItem(new Item(txtTitle.Text, txtDesc.Text));
+            this.ViewModel.SaveItem(new Item(txtTitle.Text, txtDesc.Text));
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using NavTest.ViewModels.Base;
 
 namespace NavTest
@@ -7,20 +8,18 @@ namespace NavTest
     {
         public T resources;
 
-        public bool IsLoading { get; set; }
+        public bool Busy { get; internal set; } = false;
 
-        public Action ShowItems { get; set; }
-        public Action ShowAbout { get; set; }
-        public Action ShowNewItem { get; set; }
-        public Action ReleaseModel { get; set; }
+        public Action ReleaseModelAction { get; internal set; }
 
         protected BaseViewModel(T resources)
         {
             this.resources = resources;
         }
-        //~BaseViewModel()
-        //{
-        //    var a = 10;
-        //}
+
+        ~BaseViewModel()
+        {
+            Debug.WriteLine("BaseViewModel is Released");
+        }
     }
 }

@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Diagnostics;
 using NavTest.Services;
 using NavTest.ViewModels.Base;
 
 namespace NavTest.ViewModels.ItemDetail
 {
-    internal class ItemDetailController: BaseController<ItemDetailViewModel>
+    internal class ItemDetailController : BaseController<ItemDetailViewModel>
     {
         private int id = 0;
         internal int Id
@@ -23,8 +24,13 @@ namespace NavTest.ViewModels.ItemDetail
             }
         }
 
-        internal ItemDetailController(BaseRouter router) : base(router, new ItemDetailViewModel())
+        internal ItemDetailController(BaseRouter router) : base(new ItemDetailViewModel())
         {
+            this.viewModel.ReleaseModelAction = () =>
+            {
+                Debug.WriteLine("Released" + this.GetType());
+                router.ReleaseConroller(this.GetType());
+            };
         }
     }
 }

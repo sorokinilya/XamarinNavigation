@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using NavTest.iOS.ViewControllers.TabBarController;
+using NavTest.ViewModels.TabBar;
 using UIKit;
 
 namespace NavTest.iOS
@@ -32,16 +33,16 @@ namespace NavTest.iOS
 
         ~TabBarViewController()
         {
-            this.ViewModel.ReleaseModel();
+            this.ViewModel.ReleaseModelAction();
         }
 
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
 
-            TabBar.Items[0].Title = ViewModel.resources.browseTitle;
-            TabBar.Items[1].Title = ViewModel.resources.aboutTitle;
-            this.Delegate = new TabBarDelegate(ViewModel.ShowItems, ViewModel.ShowAbout);
+            TabBar.Items[0].Title = ViewModel.resources.BrowseTitle;
+            TabBar.Items[1].Title = ViewModel.resources.AboutTitle;
+            this.Delegate = new TabBarDelegate(ViewModel.ItemsAction, ViewModel.AboutAction);
         }
     }
 }

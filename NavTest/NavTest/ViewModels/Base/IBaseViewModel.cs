@@ -3,11 +3,9 @@ namespace NavTest.ViewModels.Base
 {
     public interface IBaseViewModel
     {
-        bool IsLoading { get; set; }
+        bool Busy { get; }
 
-        Action ShowItems { get; set; }
-        Action ShowAbout { get; set; }
-        Action ShowNewItem { get; set; }
-        Action ReleaseModel { get; set; }
+        Action ReleaseModelAction { get; }
     }
+
 }

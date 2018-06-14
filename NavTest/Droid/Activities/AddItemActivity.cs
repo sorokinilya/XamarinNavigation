@@ -34,7 +34,7 @@ namespace NavTest.Droid
                 Text = title.Text,
                 Description = description.Text
             };
-            ViewModel.AddItem(item);
+            ViewModel.SaveItem(item);
         }
     }
 }

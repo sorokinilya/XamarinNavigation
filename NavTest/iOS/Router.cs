@@ -1,14 +1,13 @@
 ﻿using System;
-using NavTest.iOS.ViewControllers.TabBarController;
 using NavTest.Services;
 using NavTest.ViewModels.About;
 using NavTest.ViewModels.Items;
 using UIKit;
 using Foundation;
 using NavTest.ViewModels.ItemNew;
-using System.Diagnostics.Contracts;
 using System.Diagnostics;
 using NavTest.ViewModels.ItemDetail;
+using NavTest.ViewModels.TabBar;
 
 namespace NavTest.iOS
 {
@@ -95,9 +94,9 @@ namespace NavTest.iOS
         }
 
 
-        protected virtual void ShowItemDetail(ItemDetailViewModel viewModel)
+        protected override void ShowItemDetail(ItemDetailViewModel viewModel)
         {
-            
+
         }
 
         public override void ShowWeb(string url)

@@ -1,6 +1,5 @@
 ﻿using NavTest.ViewModels.Base;
 using NavTest.Services;
-using UIKit;
 using System.Diagnostics;
 
 namespace NavTest.ViewModels.TabBar

@@ -33,10 +33,20 @@ namespace NavTest.iOS.ViewControllers
         {
         }
 
+        public override void DidMoveToParentViewController(UIViewController parent)
+        {
+            base.DidMoveToParentViewController(parent);
+
+            if (parent == null)
+            {
+                Debug.WriteLine("ViewController is removed from parrent");
+                this.ViewModel.ReleaseModelAction();
+            }
+        }
+
         ~BaseViewController()
         {
             Debug.WriteLine("ViewController is released");
-            this.ViewModel.ReleaseModelAction();
         }
 
     }

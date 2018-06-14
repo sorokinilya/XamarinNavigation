@@ -1,5 +1,9 @@
 ﻿using System;
 using NavTest.Services;
+using NavTest.ViewModels.About;
+using NavTest.ViewModels.ItemDetail;
+using NavTest.ViewModels.ItemNew;
+using NavTest.ViewModels.Items;
 
 namespace NavTest.Droid
 {
@@ -9,27 +13,32 @@ namespace NavTest.Droid
         {
         }
 
-        public void Initialize()
+        public override void Initialize()
         {
             throw new NotImplementedException();
         }
 
-        public void ShowAbout()
+        public override void ShowWeb(string url)
         {
             throw new NotImplementedException();
         }
 
-        public void ShowItems()
+        protected override void ShowAbout(AboutViewModel viewModel)
         {
             throw new NotImplementedException();
         }
 
-        public void ShowNewItem()
+        protected override void ShowItemDetail(ItemDetailViewModel viewModel)
         {
             throw new NotImplementedException();
         }
 
-        public void ShowWeb(string url)
+        protected override void ShowItems(ItemsViewModel viewModel)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void ShowNewItem(AddItemViewModel viewModel)
         {
             throw new NotImplementedException();
         }

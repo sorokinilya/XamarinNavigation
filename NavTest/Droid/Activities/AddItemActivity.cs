@@ -1,5 +1,4 @@
 using System;
-
 using Android.App;
 using Android.OS;
 using Android.Widget;
@@ -29,11 +28,7 @@ namespace NavTest.Droid
 
         void SaveButton_Click(object sender, EventArgs e)
         {
-            var item = new Item
-            {
-                Text = title.Text,
-                Description = description.Text
-            };
+            var item = new Item(title.Text, description.Text);
             ViewModel.SaveItem(item);
         }
     }

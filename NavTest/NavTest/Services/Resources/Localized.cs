@@ -7,7 +7,10 @@ namespace NavTest.Services.Resources
     {
         AI_Title,
         AI_ItemTitle,
-        AI_ItemDescription
+        AI_ItemDescription,
+
+        TB_LitstTitle,
+        TB_AboutTitle
     }
 
 }

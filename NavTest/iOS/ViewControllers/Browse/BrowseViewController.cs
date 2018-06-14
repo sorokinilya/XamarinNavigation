@@ -19,7 +19,6 @@ namespace NavTest.iOS
         {
             base.ViewDidLoad();
 
-
             // Setup UITableView.
             this.refreshControl = new UIRefreshControl();
             this.refreshControl.ValueChanged += RefreshControl_ValueChanged;

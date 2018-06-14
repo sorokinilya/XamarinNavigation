@@ -6,6 +6,7 @@ using Android.Widget;
 using Android.Support.V4.Widget;
 using Android.App;
 using Android.Content;
+using NavTest.ViewModels.Items;
 
 namespace NavTest.Droid
 {
@@ -18,7 +19,7 @@ namespace NavTest.Droid
         SwipeRefreshLayout refresher;
 
         ProgressBar progress;
-        public static ItemsViewModel ViewModel { get; set; }
+        public ItemsViewModel ViewModel { get; set; }
 
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -29,8 +30,6 @@ namespace NavTest.Droid
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            ViewModel = new ItemsViewModel();
-
             View view = inflater.Inflate(Resource.Layout.fragment_browse, container, false);
             var recyclerView =
                 view.FindViewById<RecyclerView>(Resource.Id.recyclerView);
@@ -76,8 +75,8 @@ namespace NavTest.Droid
 
         void Refresher_Refresh(object sender, EventArgs e)
         {
-            ViewModel.LoadItemsCommand.Execute(null);
-            refresher.Refreshing = false;
+            ViewModel.ReloadAction();
+          //  refresher.Refreshing = false;
         }
 
         public void BecameVisible()

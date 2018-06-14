@@ -16,7 +16,7 @@ namespace NavTest.Droid
         ScreenOrientation = ScreenOrientation.Portrait)]
     public class MainActivity : Activity
     {
-        protected override int LayoutResource => Resource.Layout.activity_main;
+        //protected override int LayoutResource => Resource.Layout.activity_main;
 
         ViewPager pager;
         TabsAdapter adapter;

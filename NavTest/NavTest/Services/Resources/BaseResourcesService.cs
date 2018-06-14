@@ -49,7 +49,11 @@ namespace NavTest.Services.Resources
             return new Dictionary<Localized, string> {
             {Localized.AI_Title, "New item"},
             {Localized.AI_ItemTitle, "Title"},
-            {Localized.AI_ItemDescription, "Description"} };
+            {Localized.AI_ItemDescription, "Description"},
+
+                {Localized.TB_LitstTitle, "Items"},
+                {Localized.TB_AboutTitle, "About"}
+            };
         }
 
         protected virtual Dictionary<Color, Int32> defaultColors()

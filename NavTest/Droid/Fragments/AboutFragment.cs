@@ -2,6 +2,7 @@
 using Android.OS;
 using Android.Views;
 using Android.Widget;
+using NavTest.ViewModels.About;
 
 namespace NavTest.Droid
 {
@@ -24,7 +25,6 @@ namespace NavTest.Droid
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             var view = inflater.Inflate(Resource.Layout.fragment_about, container, false);
-            ViewModel = new AboutViewModel();
             learnMoreButton = view.FindViewById<Button>(Resource.Id.button_learn_more);
             return view;
         }
@@ -48,7 +48,7 @@ namespace NavTest.Droid
 
         void LearnMoreButton_Click(object sender, System.EventArgs e)
         {
-            ViewModel.OpenWebCommand.Execute(null);
+            ViewModel.ShowWebPage();
         }
     }
 }

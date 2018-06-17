@@ -11,12 +11,12 @@ namespace NavTest.iOS.Services
         {
         }
 
-        protected override Dictionary<ImageKey, IImage> defaultImages()
+        protected override Dictionary<ImageKey, string> defaultImages()
         {
-            return new Dictionary<ImageKey, IImage>
+            return new Dictionary<ImageKey, string>
             {
-                { ImageKey.TB_ListsImage, new Image("TB_Items") },
-                { ImageKey.TB_AboutImage, new Image("TB_About")}
+                { ImageKey.TB_ListsImage, "TB_Items" },
+                { ImageKey.TB_AboutImage, "TB_About"}
             };
         }
     }

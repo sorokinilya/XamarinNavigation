@@ -143,7 +143,6 @@
     <Compile Include="Extension\Extensions.cs" />
     <Compile Include="Services\Router.cs" />
     <Compile Include="Services\ResourcesService.cs" />
-    <Compile Include="Extension\Image.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Entitlements.plist" />

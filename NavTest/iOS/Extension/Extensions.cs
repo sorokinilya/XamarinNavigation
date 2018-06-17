@@ -9,5 +9,11 @@ namespace NavTest.iOS.Extension
         {
             return UIColor.FromRGB((rgb & 0x00FF0000) >> 16, (rgb & 0x0000FF00) >> 8, (rgb & 0x000000FF));
         }
+
+        public static UIImage ToUIImage(this string name)
+        {
+            var image = UIImage.FromBundle(name);
+            return image;
+        }
     }
 }

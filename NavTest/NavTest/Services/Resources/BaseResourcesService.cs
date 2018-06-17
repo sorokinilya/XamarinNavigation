@@ -7,7 +7,7 @@ namespace NavTest.Services.Resources
     {
         private readonly Dictionary<ColorKey, Int32> colors = new Dictionary<ColorKey, Int32>();
         private readonly Dictionary<LocalizedKey, string> strings = new Dictionary<LocalizedKey, string>();
-        private readonly Dictionary<ImageKey, IImage> images = new Dictionary<ImageKey, IImage>();
+        private readonly Dictionary<ImageKey, string> images = new Dictionary<ImageKey, string>();
 
         protected BaseResourcesService()
         {
@@ -39,7 +39,7 @@ namespace NavTest.Services.Resources
             return this.strings[key];
         }
 
-        public IImage GetImage(ImageKey key)
+        public string GetImage(ImageKey key)
         {
             return this.images[key];
         }
@@ -54,7 +54,7 @@ namespace NavTest.Services.Resources
             this.strings[key] = value;
         }
 
-        protected void SetImage(ImageKey imageKey, IImage image)
+        protected void SetImage(ImageKey imageKey, string image)
         {
             this.images[imageKey] = image;
         }
@@ -80,9 +80,9 @@ namespace NavTest.Services.Resources
             {ColorKey.Background, 0xffffff}};
         }
 
-        protected virtual Dictionary<ImageKey, IImage> defaultImages()
+        protected virtual Dictionary<ImageKey, string> defaultImages()
         {
-            return new Dictionary<ImageKey, IImage>();
+            return new Dictionary<ImageKey, string>();
         }
     }
 }

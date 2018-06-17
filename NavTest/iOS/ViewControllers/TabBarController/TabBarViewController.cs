@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using NavTest.iOS.Extension;
 using NavTest.iOS.ViewControllers.TabBarController;
 using NavTest.ViewModels.TabBar;
 using UIKit;
@@ -41,7 +42,9 @@ namespace NavTest.iOS
             base.ViewDidLoad();
 
             TabBar.Items[0].Title = ViewModel.resources.BrowseTitle;
+            TabBar.Items[0].Image = ViewModel.resources.BrowseImage.ToUIImage();
             TabBar.Items[1].Title = ViewModel.resources.AboutTitle;
+            TabBar.Items[1].Image = ViewModel.resources.AboutImage.ToUIImage();
             this.Delegate = new TabBarDelegate(ViewModel.ItemsAction, ViewModel.AboutAction);
         }
     }

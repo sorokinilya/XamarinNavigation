@@ -33,7 +33,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemDetail\Item.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemNew\Item.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Resources\BaseResourcesService.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\Resources\Colors.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\Resources\ColorKey.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Resources\LocalizedKey.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemDetail\ItemDetailController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TabBar\TabBarController.cs" />

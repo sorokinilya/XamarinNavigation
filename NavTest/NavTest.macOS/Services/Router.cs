@@ -1,4 +1,5 @@
 ﻿using System;
+using AppKit;
 using NavTest.Services;
 using NavTest.ViewModels.About;
 using NavTest.ViewModels.ItemDetail;
@@ -9,38 +10,45 @@ namespace NavTest.macOS.Services
 {
     public class Router : BaseRouter
     {
-        public Router()
+        private readonly NSViewController rootViewController;
+        private readonly NSStoryboard storyboard;
+
+        public Router(NSViewController rootViewController)
         {
+            this.rootViewController = rootViewController;
+            this.storyboard = NSStoryboard.FromName("Main", null);
         }
 
         public override void Initialize()
         {
-            throw new NotImplementedException();
+           // throw new NotImplementedException();
         }
 
         public override void ShowWeb(string url)
         {
-            throw new NotImplementedException();
+           // throw new NotImplementedException();
         }
 
         protected override void ShowAbout(AboutViewModel viewModel)
         {
-            throw new NotImplementedException();
+            var viewController = this.storyboard.InstantiateControllerWithIdentifier("AboutViewController") as NSViewController;
+            this.rootViewController.PresentViewController(viewController, null);
+          //  throw new NotImplementedException();
         }
 
         protected override void ShowItemDetail(ItemDetailViewModel viewModel)
         {
-            throw new NotImplementedException();
+          //  throw new NotImplementedException();
         }
 
         protected override void ShowItems(ItemsViewModel viewModel)
         {
-            throw new NotImplementedException();
+           // throw new NotImplementedException();
         }
 
         protected override void ShowNewItem(AddItemViewModel viewModel)
         {
-            throw new NotImplementedException();
+           // throw new NotImplementedException();
         }
     }
 }

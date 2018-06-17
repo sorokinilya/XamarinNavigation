@@ -13,6 +13,8 @@ namespace NavTest.ViewModels.Items
 
         internal ItemsController(BaseRouter router) : base(new ItemsViewModel())
         {
+            var resourcesService = ServiceLayer.Instance.ResourcesService;
+            this.viewModel.Resources = new ItemsResourcesModel(resourcesService.GetString(Services.Resources.LocalizedKey.I_Title));
             base.viewModel.ReloadAction = () =>
             {
                 this.LoadItems();
@@ -36,7 +38,6 @@ namespace NavTest.ViewModels.Items
 
         private void LoadItems()
         {
-            this.viewModel.Busy = true;
             Task.Run(async () =>
             {
                 var items = await dataStore.GetItemsAsync();
@@ -44,7 +45,6 @@ namespace NavTest.ViewModels.Items
                 {
                     this.viewModel.Items.Add(new Item(item.Id, item.Text, item.Description));
                 }
-                this.viewModel.Busy = false;
             });
         }
     }

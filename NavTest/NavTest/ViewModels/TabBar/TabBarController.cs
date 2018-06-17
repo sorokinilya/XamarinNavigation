@@ -10,16 +10,17 @@ namespace NavTest.ViewModels.TabBar
         internal TabBarController(BaseRouter router) : base(new TabBarViewModel())
         {
             var resourcesService = ServiceLayer.Instance.ResourcesService;
-            this.viewModel.resources.AboutTitle = resourcesService.GetString(LocalizedKey.TB_AboutTitle);
-            this.viewModel.resources.AboutImage = resourcesService.GetImage(ImageKey.TB_AboutImage);
-            this.viewModel.resources.AboutSelectedImage = resourcesService.GetImage(ImageKey.TB_SelectedAboutImage);
+            viewModel.Resources = new TabBarResourcesModel(
+                 resourcesService.GetString(LocalizedKey.TB_ListsTitle),
+            resourcesService.GetImage(ImageKey.TB_ItemsImage),
+             resourcesService.GetImage(ImageKey.TB_SelectedItemsImage),
 
-            this.viewModel.resources.ItemsTitle = resourcesService.GetString(LocalizedKey.TB_ListsTitle);
-            this.viewModel.resources.ItemsImage = resourcesService.GetImage(ImageKey.TB_ItemsImage);
-            this.viewModel.resources.ItemsSelectedImage = resourcesService.GetImage(ImageKey.TB_SelectedItemsImage);
+            resourcesService.GetString(LocalizedKey.TB_AboutTitle),
+             resourcesService.GetImage(ImageKey.TB_AboutImage),
+            resourcesService.GetImage(ImageKey.TB_SelectedAboutImage),
 
-            this.viewModel.resources.TextColor = resourcesService.GetColor(ColorKey.TB_TextColor);
-            this.viewModel.resources.SelectedTextColor = resourcesService.GetColor(ColorKey.TB_SelectedTextColor);
+             resourcesService.GetColor(ColorKey.TB_TextColor),
+              resourcesService.GetColor(ColorKey.TB_SelectedTextColor));
 
             this.viewModel.ItemsAction = () =>
             {

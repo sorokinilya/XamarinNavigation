@@ -41,16 +41,16 @@ namespace NavTest.iOS
         {
             base.ViewDidLoad();
 
-            TabBar.Items[0].Title = ViewModel.resources.ItemsTitle;
-            TabBar.Items[0].Image = ViewModel.resources.ItemsImage.ToUIImage();
-            TabBar.Items[0].SelectedImage = ViewModel.resources.ItemsSelectedImage.ToUIImage();
+            TabBar.Items[0].Title = ViewModel.Resources.itemsTitle;
+            TabBar.Items[0].Image = ViewModel.Resources.itemsImage.ToUIImage();
+            TabBar.Items[0].SelectedImage = ViewModel.Resources.itemsSelectedImage.ToUIImage();
 
-            TabBar.Items[1].Title = ViewModel.resources.AboutTitle;
-            TabBar.Items[1].Image = ViewModel.resources.AboutImage.ToUIImage();
-            TabBar.Items[1].SelectedImage = ViewModel.resources.ItemsSelectedImage.ToUIImage();
+            TabBar.Items[1].Title = ViewModel.Resources.aboutTitle;
+            TabBar.Items[1].Image = ViewModel.Resources.aboutImage.ToUIImage();
+            TabBar.Items[1].SelectedImage = ViewModel.Resources.itemsSelectedImage.ToUIImage();
 
-            TabBar.TintColor = ViewModel.resources.TextColor.ToUIColor();
-            TabBar.SelectedImageTintColor = ViewModel.resources.SelectedTextColor.ToUIColor();
+            TabBar.TintColor = ViewModel.Resources.textColor.ToUIColor();
+            TabBar.SelectedImageTintColor = ViewModel.Resources.selectedTextColor.ToUIColor();
             this.Delegate = new TabBarDelegate(ViewModel.ItemsAction, ViewModel.AboutAction);
         }
     }

@@ -5,6 +5,6 @@ namespace NavTest.ViewModels.ItemNew
     {
         public Action<Item> SaveItem { get; set; }
 
-        internal AddItemViewModel() : base(new AddItemResourcesModel()) { }
+        internal AddItemViewModel() : base() { }
     }
 }

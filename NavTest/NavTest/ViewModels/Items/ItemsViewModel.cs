@@ -10,7 +10,7 @@ namespace NavTest.ViewModels.Items
         public Action<int> SelectedAction { get; internal set; }
         public Action NewItemAction { get; internal set; }
 
-        internal ItemsViewModel() : base(new ItemsResourcesModel()) { }
+        internal ItemsViewModel() : base() { }
 
     }
 }

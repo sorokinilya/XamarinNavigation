@@ -66,8 +66,14 @@ namespace NavTest.Services.Resources
             {LocalizedKey.AI_ItemTitle, "Title"},
             {LocalizedKey.AI_ItemDescription, "Description"},
 
-                {LocalizedKey.TB_ListsTitle, "Items"},
-                {LocalizedKey.TB_AboutTitle, "About"}
+                {LocalizedKey.A_Title, "About"},
+
+                {LocalizedKey.TB_ListsTitle, "Browse"},
+                {LocalizedKey.TB_AboutTitle, "About"},
+
+                {LocalizedKey.ID_Title, "Details"},
+
+                {LocalizedKey.I_Title, "Browse"}
             };
         }
 

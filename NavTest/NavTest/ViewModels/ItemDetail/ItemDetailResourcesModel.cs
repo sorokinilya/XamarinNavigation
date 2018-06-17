@@ -1,10 +1,13 @@
 ﻿using System;
 namespace NavTest.ViewModels.ItemDetail
 {
-    public class ItemDetailResourcesModel
+    public struct ItemDetailResourcesModel
     {
-        public string Title { get; internal set; }
+        public string title;
 
-        internal ItemDetailResourcesModel() { }
+        internal ItemDetailResourcesModel(string title) 
+        {
+            this.title = title;
+        }
     }
 }

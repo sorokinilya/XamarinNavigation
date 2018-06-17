@@ -14,11 +14,13 @@ namespace NavTest.ViewModels.ItemNew
         internal AddItemController(BaseRouter router) : base(new AddItemViewModel())
         {
             var resourcesService = ServiceLayer.Instance.ResourcesService;
-            base.viewModel.resources.TitleColor = resourcesService.GetColor(ColorKey.Main);
-            base.viewModel.resources.DescriptionColor = resourcesService.GetColor(ColorKey.Tint);
-            base.viewModel.resources.Title = resourcesService.GetString(LocalizedKey.AI_Title);
-            base.viewModel.resources.ItemTitle = resourcesService.GetString(LocalizedKey.AI_ItemTitle);
-            base.viewModel.resources.ItemDescription = resourcesService.GetString(LocalizedKey.AI_ItemDescription);
+            this.viewModel.Resources = new AddItemResourcesModel(
+                resourcesService.GetString(LocalizedKey.AI_Title),
+                resourcesService.GetString(LocalizedKey.AI_ItemTitle),
+                resourcesService.GetString(LocalizedKey.AI_ItemDescription),
+                resourcesService.GetColor(ColorKey.Main),
+                resourcesService.GetColor(ColorKey.Tint)
+            );
 
             base.viewModel.SaveItem = async (item) =>
             {

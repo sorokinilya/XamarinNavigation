@@ -4,17 +4,14 @@ using NavTest.ViewModels.Base;
 
 namespace NavTest
 {
-    public class BaseViewModel<T> : IBaseViewModel
+    public class BaseViewModel<T> : IBaseViewModel where T: struct
     {
-        public T resources;
-
-        public bool Busy { get; internal set; } = false;
+        public T Resources { get; internal set; }
 
         public Action ReleaseModelAction { get; internal set; }
 
-        protected BaseViewModel(T resources)
+        protected BaseViewModel()
         {
-            this.resources = resources;
         }
 
         ~BaseViewModel()

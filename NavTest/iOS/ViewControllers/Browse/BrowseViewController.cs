@@ -26,7 +26,7 @@ namespace NavTest.iOS
             this.tableView.Source = new ItemsDataSource(ViewModel.Items, ViewModel.SelectedAction);
             this.btnAddItem.TouchUpInside += (sender, ea) => ViewModel.NewItemAction();
             this.ViewModel.Items.CollectionChanged += this.OnCollectionChanged;
-            Title = ViewModel.resources.Title;
+            Title = ViewModel.Resources.title;
         }
 
 

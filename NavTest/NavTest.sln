@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NavTest.iOS", "iOS\NavTest.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NavTest.Droid", "Droid\NavTest.Droid.csproj", "{3180A213-0AF7-44FD-B0E8-B6A5A7BE67E2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NavTest.macOS", "NavTest.macOS\NavTest.macOS.csproj", "{83E36C7F-67D7-468E-8B4A-908F4BDA457D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|iPhoneSimulator = Debug|iPhoneSimulator
@@ -41,5 +43,17 @@ Global
 		{3180A213-0AF7-44FD-B0E8-B6A5A7BE67E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3180A213-0AF7-44FD-B0E8-B6A5A7BE67E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3180A213-0AF7-44FD-B0E8-B6A5A7BE67E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83E36C7F-67D7-468E-8B4A-908F4BDA457D}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{83E36C7F-67D7-468E-8B4A-908F4BDA457D}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{83E36C7F-67D7-468E-8B4A-908F4BDA457D}.Release|iPhone.ActiveCfg = Release|iPhoneSimulator
+		{83E36C7F-67D7-468E-8B4A-908F4BDA457D}.Release|iPhone.Build.0 = Release|iPhoneSimulator
+		{83E36C7F-67D7-468E-8B4A-908F4BDA457D}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{83E36C7F-67D7-468E-8B4A-908F4BDA457D}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{83E36C7F-67D7-468E-8B4A-908F4BDA457D}.Debug|iPhone.ActiveCfg = Debug|iPhoneSimulator
+		{83E36C7F-67D7-468E-8B4A-908F4BDA457D}.Debug|iPhone.Build.0 = Debug|iPhoneSimulator
+		{83E36C7F-67D7-468E-8B4A-908F4BDA457D}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
+		{83E36C7F-67D7-468E-8B4A-908F4BDA457D}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
+		{83E36C7F-67D7-468E-8B4A-908F4BDA457D}.Release|Any CPU.ActiveCfg = Release|iPhoneSimulator
+		{83E36C7F-67D7-468E-8B4A-908F4BDA457D}.Release|Any CPU.Build.0 = Release|iPhoneSimulator
 	EndGlobalSection
 EndGlobal

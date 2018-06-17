@@ -3,19 +3,41 @@ using NavTest.Services.Resources;
 
 namespace NavTest.ViewModels.TabBar
 {
-    public class TabBarResourcesModel
+    public struct TabBarResourcesModel
     {
-        public string ItemsTitle { get; internal set; }
-        public string ItemsImage { get; internal set; }
-        public string ItemsSelectedImage { get; internal set; }
+        public readonly string itemsTitle;
+        public readonly string itemsImage;
+        public readonly string itemsSelectedImage;
 
-        public string AboutTitle { get; internal set; }
-        public string AboutImage { get; internal set; }
-        public string AboutSelectedImage { get; internal set; }
+        public readonly string aboutTitle;
+        public readonly string aboutImage;
+        public readonly string aboutSelectedImage;
 
-        public Int32 TextColor { get; internal set; }
-        public Int32 SelectedTextColor { get; internal set; }
+        public readonly Int32 textColor;
+        public readonly Int32 selectedTextColor;
 
-        internal TabBarResourcesModel() { }
+        internal TabBarResourcesModel(
+            string itemsTitle,
+        string itemsImage,
+       string itemsSelectedImage,
+
+        string aboutTitle,
+        string aboutImage,
+       string aboutSelectedImage,
+
+        Int32 textColor,
+       Int32 selectedTextColor)
+        {
+            this.itemsTitle = itemsTitle;
+            this.itemsImage = itemsImage;
+            this.itemsSelectedImage = itemsSelectedImage;
+
+            this.aboutTitle = aboutTitle;
+            this.aboutImage = aboutImage;
+            this.aboutSelectedImage = aboutSelectedImage;
+
+            this.textColor = textColor;
+            this.selectedTextColor = selectedTextColor;
+        }
     }
 }

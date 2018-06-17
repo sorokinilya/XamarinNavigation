@@ -17,7 +17,7 @@ namespace NavTest.iOS
         {
             base.ViewDidLoad();
 
-            Title = ViewModel.resources.Title;
+            Title = ViewModel.Resources.title;
 
             //AppNameLabel.Text = "NavTest";
             //VersionLabel.Text = "1.0";

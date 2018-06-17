@@ -1,11 +1,13 @@
 ﻿using System;
 namespace NavTest.ViewModels.Items
 {
-    public class ItemsResourcesModel
+    public struct ItemsResourcesModel
     {
-        public string Title { get; internal set; }
-        internal ItemsResourcesModel()
+        public readonly string title;
+
+        internal ItemsResourcesModel(string title)
         {
+            this.title = title;
         }
     }
 }

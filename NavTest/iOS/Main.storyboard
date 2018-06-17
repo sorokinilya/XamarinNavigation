@@ -43,16 +43,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1638">
-                                <rect key="frame" x="20" y="253" width="335" height="201"/>
+                                <rect key="frame" x="20" y="253" width="335" height="274"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="201" id="1747"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1646">
-                                <rect key="frame" x="263" y="506" width="74" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1646">
+                                <rect key="frame" x="150.5" y="547" width="74" height="30"/>
                                 <state key="normal" title="Read More">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -74,8 +71,9 @@
                             <constraint firstItem="1638" firstAttribute="leading" secondItem="1635" secondAttribute="leading" id="1729"/>
                             <constraint firstAttribute="trailing" secondItem="1638" secondAttribute="trailing" constant="20" id="1730"/>
                             <constraint firstItem="1638" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="1732"/>
-                            <constraint firstItem="1646" firstAttribute="top" secondItem="1638" secondAttribute="bottom" constant="18" id="1743"/>
-                            <constraint firstItem="1646" firstAttribute="centerX" secondItem="1638" secondAttribute="centerX" id="1744"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="1646" secondAttribute="bottom" constant="90" id="Bba-1N-vxE"/>
+                            <constraint firstItem="1646" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="MOd-vQ-nXA"/>
+                            <constraint firstItem="1646" firstAttribute="top" secondItem="1638" secondAttribute="bottom" constant="20" id="ci0-fD-jyZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="About" id="EmL-wi-Nb6"/>

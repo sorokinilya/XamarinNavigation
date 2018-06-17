@@ -6,7 +6,7 @@ namespace NavTest.ViewModels.TabBar
     {
         public Action ItemsAction { get; internal set; }
         public Action AboutAction { get; internal set; }
-        internal TabBarViewModel() : base(new TabBarResourcesModel())
+        internal TabBarViewModel() : base()
         {
 
         }

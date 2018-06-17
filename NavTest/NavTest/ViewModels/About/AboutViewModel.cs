@@ -6,6 +6,6 @@ namespace NavTest.ViewModels.About
     {
         public Action ShowWebPage { get; internal set; }
 
-        internal AboutViewModel() : base(new AboutResourcesModel()) { }
+        internal AboutViewModel() : base() { }
     }
 }

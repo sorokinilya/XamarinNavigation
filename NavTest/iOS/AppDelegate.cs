@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Foundation;
+using NavTest.iOS.Services;
 using NavTest.Services;
 using UIKit;
 
@@ -23,7 +24,7 @@ namespace NavTest.iOS
         {
             var root = Window.RootViewController as TabBarViewController;
             var router = new Router(root);
-            Core.Initialize(router);
+            Core.Initialize(router, new ResourcesService());
             router.ShowItems();
             return true;
         }

@@ -100,19 +100,19 @@
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\First.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\First.imageset\tab_feed.png" />
-    <ImageAsset Include="Assets.xcassets\First.imageset\tab_feed%402x.png" />
-    <ImageAsset Include="Assets.xcassets\First.imageset\tab_feed%403x.png" />
-    <ImageAsset Include="Assets.xcassets\Second.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\Second.imageset\tab_about.png" />
-    <ImageAsset Include="Assets.xcassets\Second.imageset\tab_about%402x.png" />
-    <ImageAsset Include="Assets.xcassets\Second.imageset\tab_about%403x.png" />
     <ImageAsset Include="Assets.xcassets\XamarinLogo.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\XamarinLogo.imageset\xamarin_logo.png" />
     <ImageAsset Include="Assets.xcassets\XamarinLogo.imageset\xamarin_logo%402x.png" />
     <ImageAsset Include="Assets.xcassets\XamarinLogo.imageset\xamarin_logo%403x.png" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\TB_Items.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\TB_Items.imageset\tab_feed.png" />
+    <ImageAsset Include="Assets.xcassets\TB_Items.imageset\tab_feed%402x.png" />
+    <ImageAsset Include="Assets.xcassets\TB_Items.imageset\tab_feed%403x.png" />
+    <ImageAsset Include="Assets.xcassets\TB_About.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\TB_About.imageset\tab_about.png" />
+    <ImageAsset Include="Assets.xcassets\TB_About.imageset\tab_about%402x.png" />
+    <ImageAsset Include="Assets.xcassets\TB_About.imageset\tab_about%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ViewControllers\DetailViewControllers\BrowseItemDetailViewController.cs" />
@@ -129,7 +129,6 @@
     </Compile>
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Main.cs" />
-    <Compile Include="Router.cs" />
     <Compile Include="ViewControllers\BaseViewController.cs" />
     <Compile Include="ViewControllers\TabBarController\TabBarViewController.cs" />
     <Compile Include="ViewControllers\TabBarController\TabBarViewController.designer.cs">
@@ -141,7 +140,10 @@
     </Compile>
     <Compile Include="ViewControllers\Browse\ItemsDataSource.cs" />
     <Compile Include="ViewControllers\TabBarController\TabBarDelegate.cs" />
-    <Compile Include="Extension\ExtensionMethods.cs" />
+    <Compile Include="Extension\Extensions.cs" />
+    <Compile Include="Services\Router.cs" />
+    <Compile Include="Services\ResourcesService.cs" />
+    <Compile Include="Extension\Image.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Entitlements.plist" />
@@ -156,6 +158,9 @@
     <Folder Include="ViewControllers\TabBarController\" />
     <Folder Include="ViewControllers\Browse\" />
     <Folder Include="Extension\" />
+    <Folder Include="Services\" />
+    <Folder Include="Assets.xcassets\TB_Items.imageset\" />
+    <Folder Include="Assets.xcassets\TB_About.imageset\" />
   </ItemGroup>
   <Import Project="..\NavTest\NavTest.projitems" Label="Shared" Condition="Exists('..\NavTest\NavTest.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

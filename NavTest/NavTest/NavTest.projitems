@@ -34,11 +34,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemNew\Item.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Resources\BaseResourcesService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Resources\Colors.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\Resources\Localized.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\Resources\LocalizedKey.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemDetail\ItemDetailController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TabBar\TabBarController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TabBar\TabBarUIModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TabBar\TabBarViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\Resources\ImageKey.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)ViewModels\About\" />

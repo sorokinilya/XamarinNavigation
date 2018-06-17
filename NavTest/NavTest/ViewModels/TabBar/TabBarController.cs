@@ -9,8 +9,12 @@ namespace NavTest.ViewModels.TabBar
     {
         internal TabBarController(BaseRouter router) : base(new TabBarViewModel())
         {
-            this.viewModel.resources.AboutTitle = this.resourcesService.GetString(Localized.TB_AboutTitle);
-            this.viewModel.resources.BrowseTitle = this.resourcesService.GetString(Localized.TB_LitstTitle);
+            var resourcesService = ServiceLayer.Instance.ResourcesService;
+            this.viewModel.resources.AboutTitle = resourcesService.GetString(LocalizedKey.TB_AboutTitle);
+            this.viewModel.resources.AboutImage = resourcesService.GetImage(ImageKey.TB_AboutImage);
+
+            this.viewModel.resources.BrowseTitle = resourcesService.GetString(LocalizedKey.TB_ListsTitle);
+            this.viewModel.resources.BrowseImage = resourcesService.GetImage(ImageKey.TB_ListsImage);
             this.viewModel.ItemsAction = () =>
             {
                 router.ShowItems();

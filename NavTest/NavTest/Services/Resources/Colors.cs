@@ -3,7 +3,7 @@
 using System;
 using System.Collections.Generic;
 
-public enum Color : byte
+public enum ColorKey : byte
 {
     Main,
     Tint,

@@ -5,10 +5,11 @@ namespace NavTest.Services.Resources
 {
     public class BaseResourcesService
     {
-        private readonly Dictionary<Color, Int32> colors = new Dictionary<Color, Int32>();
-        private readonly Dictionary<Localized, string> strings = new Dictionary<Localized, string>();
+        private readonly Dictionary<ColorKey, Int32> colors = new Dictionary<ColorKey, Int32>();
+        private readonly Dictionary<LocalizedKey, string> strings = new Dictionary<LocalizedKey, string>();
+        private readonly Dictionary<ImageKey, IImage> images = new Dictionary<ImageKey, IImage>();
 
-        public BaseResourcesService()
+        protected BaseResourcesService()
         {
         }
 
@@ -22,47 +23,66 @@ namespace NavTest.Services.Resources
             {
                 this.SetString(item.Key, item.Value);
             }
+            foreach (var item in this.defaultImages())
+            {
+                this.SetImage(item.Key, item.Value);
+            }
         }
 
-        public Int32 GetColor(Color key)
+        public Int32 GetColor(ColorKey key)
         {
             return this.colors[key];
         }
 
-        public string GetString(Localized key)
+        public string GetString(LocalizedKey key)
         {
             return this.strings[key];
         }
 
-        protected void SetColor(Color key, Int32 value)
+        public IImage GetImage(ImageKey key)
+        {
+            return this.images[key];
+        }
+
+        protected void SetColor(ColorKey key, Int32 value)
         {
             this.colors[key] = value;
         }
 
-        protected void SetString(Localized key, string value)
+        protected void SetString(LocalizedKey key, string value)
         {
             this.strings[key] = value;
         }
 
-        protected virtual Dictionary<Localized, string> defaultStrings()
+        protected void SetImage(ImageKey imageKey, IImage image)
         {
-            return new Dictionary<Localized, string> {
-            {Localized.AI_Title, "New item"},
-            {Localized.AI_ItemTitle, "Title"},
-            {Localized.AI_ItemDescription, "Description"},
+            this.images[imageKey] = image;
+        }
 
-                {Localized.TB_LitstTitle, "Items"},
-                {Localized.TB_AboutTitle, "About"}
+        protected virtual Dictionary<LocalizedKey, string> defaultStrings()
+        {
+            return new Dictionary<LocalizedKey, string> {
+            {LocalizedKey.AI_Title, "New item"},
+            {LocalizedKey.AI_ItemTitle, "Title"},
+            {LocalizedKey.AI_ItemDescription, "Description"},
+
+                {LocalizedKey.TB_ListsTitle, "Items"},
+                {LocalizedKey.TB_AboutTitle, "About"}
             };
         }
 
-        protected virtual Dictionary<Color, Int32> defaultColors()
+        protected virtual Dictionary<ColorKey, Int32> defaultColors()
         {
-            return new Dictionary<Color, Int32> {
-            {Color.Main, 0x0000ff},
-            {Color.Tint, 0xff0000},
-            {Color.Shadow, 0xfefefe},
-            {Color.Background, 0xffffff}};
+            return new Dictionary<ColorKey, Int32> {
+            {ColorKey.Main, 0x0000ff},
+            {ColorKey.Tint, 0xff0000},
+            {ColorKey.Shadow, 0xfefefe},
+            {ColorKey.Background, 0xffffff}};
+        }
+
+        protected virtual Dictionary<ImageKey, IImage> defaultImages()
+        {
+            return new Dictionary<ImageKey, IImage>();
         }
     }
 }

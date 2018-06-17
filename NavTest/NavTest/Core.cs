@@ -10,16 +10,12 @@ namespace NavTest
     {
 
         public static void Initialize(BaseRouter router,
-                                      BaseResourcesService resourcesService = null)
+                                      BaseResourcesService resourcesService)
         {
             var serviceLayer = ServiceLayer.Instance;
             DataStore store = new DataStore();
             serviceLayer.Register(store);
             serviceLayer.Register(router);
-            if (resourcesService == null)
-            {
-                resourcesService = new BaseResourcesService();
-            }
             serviceLayer.Register(resourcesService);
             resourcesService.Initialize();
             store.Initialize();

@@ -77,7 +77,12 @@ namespace NavTest.Services.Resources
             {ColorKey.Main, 0x0000ff},
             {ColorKey.Tint, 0xff0000},
             {ColorKey.Shadow, 0xfefefe},
-            {ColorKey.Background, 0xffffff}};
+            {ColorKey.Background, 0xffffff},
+
+                //Tab bar
+                { ColorKey.TB_TextColor, 0xaaaaaa},
+                { ColorKey.TB_SelectedTextColor, 0x0000a0 }
+            };
         }
 
         protected virtual Dictionary<ImageKey, string> defaultImages()

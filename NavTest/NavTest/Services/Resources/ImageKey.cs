@@ -6,8 +6,11 @@ namespace NavTest.Services.Resources
                         
     public enum ImageKey : Int16
     {
-        TB_ListsImage,
-        TB_AboutImage
+        //Tab bar
+        TB_ItemsImage,
+        TB_SelectedItemsImage,
+        TB_AboutImage,
+        TB_SelectedAboutImage
     }
 
 }

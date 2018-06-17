@@ -41,10 +41,16 @@ namespace NavTest.iOS
         {
             base.ViewDidLoad();
 
-            TabBar.Items[0].Title = ViewModel.resources.BrowseTitle;
-            TabBar.Items[0].Image = ViewModel.resources.BrowseImage.ToUIImage();
+            TabBar.Items[0].Title = ViewModel.resources.ItemsTitle;
+            TabBar.Items[0].Image = ViewModel.resources.ItemsImage.ToUIImage();
+            TabBar.Items[0].SelectedImage = ViewModel.resources.ItemsSelectedImage.ToUIImage();
+
             TabBar.Items[1].Title = ViewModel.resources.AboutTitle;
             TabBar.Items[1].Image = ViewModel.resources.AboutImage.ToUIImage();
+            TabBar.Items[1].SelectedImage = ViewModel.resources.ItemsSelectedImage.ToUIImage();
+
+            TabBar.TintColor = ViewModel.resources.TextColor.ToUIColor();
+            TabBar.SelectedImageTintColor = ViewModel.resources.SelectedTextColor.ToUIColor();
             this.Delegate = new TabBarDelegate(ViewModel.ItemsAction, ViewModel.AboutAction);
         }
     }

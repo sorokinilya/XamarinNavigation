@@ -1,8 +1,13 @@
 ﻿
 public enum ColorKey : byte
 {
+    //General
     Main,
     Tint,
     Shadow,
-    Background
+    Background,
+
+    //Tab bar
+    TB_TextColor,
+    TB_SelectedTextColor
 }

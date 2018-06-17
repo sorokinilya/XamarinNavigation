@@ -37,7 +37,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\Resources\LocalizedKey.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemDetail\ItemDetailController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TabBar\TabBarController.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TabBar\TabBarUIModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TabBar\TabBarResourcesModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TabBar\TabBarViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Resources\ImageKey.cs" />
   </ItemGroup>

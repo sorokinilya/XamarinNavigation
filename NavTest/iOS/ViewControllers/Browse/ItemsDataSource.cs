@@ -11,12 +11,10 @@ namespace NavTest.iOS.ViewControllers.Browse
         static readonly NSString CELL_IDENTIFIER = new NSString("ITEM_CELL");
 
         private ObservableCollection<Item> items;
-        private Action<int> action;
 
-        public ItemsDataSource(ObservableCollection<Item> items, Action<int> action)
+        public ItemsDataSource(ObservableCollection<Item> items)
         {
             this.items = items;
-            this.action = action;
         }
 
         public override nint RowsInSection(UITableView tableview, nint section) => this.items.Count;
@@ -27,15 +25,15 @@ namespace NavTest.iOS.ViewControllers.Browse
             var cell = tableView.DequeueReusableCell(CELL_IDENTIFIER, indexPath);
 
             var item = this.items[indexPath.Row];
-            cell.TextLabel.Text = item.text;
-            cell.DetailTextLabel.Text = item.description;
+            cell.TextLabel.Text = item.Text;
+            cell.DetailTextLabel.Text = item.Description;
             cell.LayoutMargins = UIEdgeInsets.Zero;
             return cell;
         }
 
         public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
         {
-            this.action(this.items[indexPath.Row].id);
+            this.items[indexPath.Row].SelectAction();
         }
 
     }

@@ -7,18 +7,18 @@ namespace NavTest.ViewModels.About
 {
     internal class AboutController : BaseController<AboutViewModel>
     {
-        internal AboutController(BaseRouter router) : base(new AboutViewModel())
+        internal AboutController() : base(new AboutViewModel())
         {
             var resourcesService = ServiceLayer.Instance.ResourcesService;
             viewModel.Resources = new AboutResourcesModel(resourcesService.GetString(Services.Resources.LocalizedKey.A_Title));
             viewModel.ShowWebPage = () =>
             {
-                router.ShowWeb("https://google.com");
+                ServiceLayer.Instance.Router.ShowMore();
             };
             this.viewModel.ReleaseModelAction = () =>
             {
                 Debug.WriteLine("Released" + this.GetType());
-                router.ReleaseConroller(this.GetType());
+                ServiceLayer.Instance.Router.ReleaseConroller(this.GetType());
             };
         }
     }

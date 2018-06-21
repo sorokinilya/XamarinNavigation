@@ -3,24 +3,26 @@ namespace NavTest.ViewModels.ItemNew
 {
     public struct AddItemResourcesModel
     {
-        public readonly string title;
-        public readonly string itemTitle;
-        public readonly string itemDescription;
-        public readonly Int32 titleColor;
-        public readonly Int32 descriptionColor;
+        public string Title { get; }
+
+        public string ItemTitle { get; }
+        public Int32 ItemTitleColor { get; }
+
+        public string ItemDescription { get; }
+        public Int32 DescriptionColor { get; }
 
         internal AddItemResourcesModel(
-           string title,
-        string itemTitle,
-        string itemDescription,
-        Int32 titleColor,
-        Int32 descriptionColor) 
+            string title,
+            string itemTitle,
+            string itemDescription,
+            Int32 titleColor,
+            Int32 descriptionColor)
         {
-            this.title = title;
-            this.itemTitle = itemTitle;
-            this.itemDescription = itemDescription;
-            this.titleColor = titleColor;
-            this.descriptionColor = descriptionColor;
+            this.Title = title;
+            this.ItemTitle = itemTitle;
+            this.ItemDescription = itemDescription;
+            this.ItemTitleColor = titleColor;
+            this.DescriptionColor = descriptionColor;
         }
     }
 }

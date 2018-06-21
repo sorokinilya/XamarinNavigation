@@ -24,7 +24,7 @@ namespace NavTest.ViewModels.ItemDetail
             }
         }
 
-        internal ItemDetailController(BaseRouter router) : base( new ItemDetailViewModel())
+        internal ItemDetailController() : base(new ItemDetailViewModel())
         {
             var resourcesService = ServiceLayer.Instance.ResourcesService;
             this.viewModel.Resources = new ItemDetailResourcesModel(resourcesService.GetString(Services.Resources.LocalizedKey.ID_Title));
@@ -32,7 +32,7 @@ namespace NavTest.ViewModels.ItemDetail
             this.viewModel.ReleaseModelAction = () =>
             {
                 Debug.WriteLine("Released" + this.GetType());
-                router.ReleaseConroller(this.GetType());
+                ServiceLayer.Instance.Router.ReleaseConroller(this.GetType());
             };
         }
     }

@@ -3,15 +3,18 @@ namespace NavTest.ViewModels.Items
 {
     public struct Item
     {
-        public readonly int id;
-        public readonly string text;
-        public readonly string description;
+        internal int Id { get; }
+        public string Text { get; }
+        public string Description { get; }
 
-        internal Item(int id, string text, string description)
+        public Action SelectAction { get; }
+
+        internal Item(int id, string text, string description, Action selectAction)
         {
-            this.id = id;
-            this.text = text;
-            this.description = description;
+            this.Id = id;
+            this.Text = text;
+            this.Description = description;
+            this.SelectAction = selectAction;
         }
 
     }

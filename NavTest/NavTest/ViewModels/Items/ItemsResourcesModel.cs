@@ -3,11 +3,11 @@ namespace NavTest.ViewModels.Items
 {
     public struct ItemsResourcesModel
     {
-        public readonly string title;
+        public string Title { get; }
 
         internal ItemsResourcesModel(string title)
         {
-            this.title = title;
+            this.Title = title;
         }
     }
 }

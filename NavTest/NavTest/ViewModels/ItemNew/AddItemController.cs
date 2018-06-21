@@ -11,7 +11,7 @@ namespace NavTest.ViewModels.ItemNew
 
         private DataStore dataStore = ServiceLayer.Instance.DataStore;
 
-        internal AddItemController(BaseRouter router) : base(new AddItemViewModel())
+        internal AddItemController() : base(new AddItemViewModel())
         {
             var resourcesService = ServiceLayer.Instance.ResourcesService;
             this.viewModel.Resources = new AddItemResourcesModel(
@@ -31,13 +31,13 @@ namespace NavTest.ViewModels.ItemNew
                     Id = 0
                 };
                 await dataStore.AddItemAsync(storeItem);
-                router.ShowItems();
+                ServiceLayer.Instance.Router.ShowItems();
             };
 
             this.viewModel.ReleaseModelAction = () =>
             {
                 Debug.WriteLine("Released " + this.GetType());
-                router.ReleaseConroller(this.GetType());
+                ServiceLayer.Instance.Router.ReleaseConroller(this.GetType());
             };
         }
     }

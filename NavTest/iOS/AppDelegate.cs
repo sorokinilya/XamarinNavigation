@@ -25,7 +25,6 @@ namespace NavTest.iOS
             var root = Window.RootViewController as TabBarViewController;
             var router = new Router(root);
             Core.Initialize(router, new ResourcesService());
-            router.ShowItems();
             return true;
         }
 

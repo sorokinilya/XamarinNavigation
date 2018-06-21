@@ -5,39 +5,39 @@ namespace NavTest.ViewModels.TabBar
 {
     public struct TabBarResourcesModel
     {
-        public readonly string itemsTitle;
-        public readonly string itemsImage;
-        public readonly string itemsSelectedImage;
+        public string ItemsTitle { get; }
+        public string ItemsImage { get; }
+        public string ItemsSelectedImage { get; }
 
-        public readonly string aboutTitle;
-        public readonly string aboutImage;
-        public readonly string aboutSelectedImage;
+        public string AboutTitle { get; }
+        public string AboutImage { get; }
+        public string AboutSelectedImage { get; }
 
-        public readonly Int32 textColor;
-        public readonly Int32 selectedTextColor;
+        public Int32 TextColor { get; }
+        public Int32 SelectedTextColor { get; }
 
         internal TabBarResourcesModel(
             string itemsTitle,
-        string itemsImage,
-       string itemsSelectedImage,
+            string itemsImage,
+            string itemsSelectedImage,
 
-        string aboutTitle,
-        string aboutImage,
-       string aboutSelectedImage,
+            string aboutTitle,
+            string aboutImage,
+            string aboutSelectedImage,
 
-        Int32 textColor,
-       Int32 selectedTextColor)
+            Int32 textColor,
+            Int32 selectedTextColor)
         {
-            this.itemsTitle = itemsTitle;
-            this.itemsImage = itemsImage;
-            this.itemsSelectedImage = itemsSelectedImage;
+            this.ItemsTitle = itemsTitle;
+            this.ItemsImage = itemsImage;
+            this.ItemsSelectedImage = itemsSelectedImage;
 
-            this.aboutTitle = aboutTitle;
-            this.aboutImage = aboutImage;
-            this.aboutSelectedImage = aboutSelectedImage;
+            this.AboutTitle = aboutTitle;
+            this.AboutImage = aboutImage;
+            this.AboutSelectedImage = aboutSelectedImage;
 
-            this.textColor = textColor;
-            this.selectedTextColor = selectedTextColor;
+            this.TextColor = textColor;
+            this.SelectedTextColor = selectedTextColor;
         }
     }
 }

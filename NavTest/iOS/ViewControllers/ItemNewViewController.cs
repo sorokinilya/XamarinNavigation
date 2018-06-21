@@ -17,13 +17,13 @@ namespace NavTest.iOS
         {
             base.ViewDidLoad();
 
-            this.Title = this.ViewModel.Resources.title;
+            this.Title = this.ViewModel.Resources.Title;
 
-            this.titleLabel.Text = this.ViewModel.Resources.itemTitle;
-            this.titleLabel.TextColor = this.ViewModel.Resources.titleColor.ToUIColor();
+            this.titleLabel.Text = this.ViewModel.Resources.ItemTitle;
+            this.titleLabel.TextColor = this.ViewModel.Resources.ItemTitleColor.ToUIColor();
 
-            this.descriptionLabel.Text = this.ViewModel.Resources.itemDescription;
-            this.descriptionLabel.TextColor = this.ViewModel.Resources.descriptionColor.ToUIColor();
+            this.descriptionLabel.Text = this.ViewModel.Resources.ItemDescription;
+            this.descriptionLabel.TextColor = this.ViewModel.Resources.DescriptionColor.ToUIColor();
         }
 
         public override void ViewWillAppear(bool animated)

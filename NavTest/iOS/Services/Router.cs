@@ -25,10 +25,11 @@ namespace NavTest.iOS
         public override void Initialize()
         {
             Debug.Assert(NSThread.IsMain, "Navigation from second thread" + new StackTrace().GetFrame(1).GetMethod().Name);
-            var controller = this.GetController(() => new TabBarController(this));
+            var controller = this.GetController(() => new TabBarController());
             this.tabBarController.ViewModel = controller.viewModel;
             UIViewController[] controllers = { this.makeNavigationController(), this.makeNavigationController() };
             this.tabBarController.ViewControllers = controllers;
+            this.ShowItems();
         }
 
         protected override void ShowItems(ItemsViewModel viewModel)
@@ -99,7 +100,7 @@ namespace NavTest.iOS
 
         }
 
-        public override void ShowWeb(string url)
+        protected override void ShowWeb(string url)
         {
             Debug.Assert(NSThread.IsMain, "Navigation from second thread" + new StackTrace().GetFrame(1).GetMethod().Name);
             UIApplication.SharedApplication.OpenUrl(new NSUrl(url));

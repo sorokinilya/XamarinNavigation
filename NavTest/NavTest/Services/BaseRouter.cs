@@ -18,24 +18,29 @@ namespace NavTest.Services
 
         public abstract void Initialize();
 
-        public void ShowItems()
+        internal void ShowItems()
         {
-            this.ShowItems(this.GetController(() => new ItemsController(this)).viewModel);
+            this.ShowItems(this.GetController(() => new ItemsController()).viewModel);
         }
 
-        public void ShowNewItem()
+        internal void ShowNewItem()
         {
-            this.ShowNewItem(this.GetController(() => new AddItemController(this)).viewModel);
+            this.ShowNewItem(this.GetController(() => new AddItemController()).viewModel);
         }
 
-        public void ShowAbout()
+        internal void ShowAbout()
         {
-            this.ShowAbout(this.GetController(() => new AboutController(this)).viewModel);
+            this.ShowAbout(this.GetController(() => new AboutController()).viewModel);
         }
 
-        public void ShowItemDetail(int id) 
+        internal void ShowMore()
         {
-            var contoller = this.GetController(() => new ItemDetailController(this));
+            this.ShowWeb("https://google.com");
+        }
+
+        internal void ShowItemDetail(int id)
+        {
+            var contoller = this.GetController(() => new ItemDetailController());
             contoller.Id = id;
             this.ShowItemDetail(contoller.viewModel);
         }
@@ -46,9 +51,9 @@ namespace NavTest.Services
 
         protected abstract void ShowAbout(AboutViewModel viewModel);
 
-        protected abstract void ShowItemDetail(ItemDetailViewModel viewModel); 
+        protected abstract void ShowItemDetail(ItemDetailViewModel viewModel);
 
-        public abstract void ShowWeb(string url);
+        protected abstract void ShowWeb(string url);
 
         internal void ReleaseConroller(Type type)
         {

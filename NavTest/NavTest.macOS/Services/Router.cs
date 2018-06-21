@@ -1,5 +1,6 @@
 ﻿using System;
 using AppKit;
+using NavTest.macOS.ViewControllers;
 using NavTest.Services;
 using NavTest.ViewModels.About;
 using NavTest.ViewModels.ItemDetail;
@@ -21,34 +22,33 @@ namespace NavTest.macOS.Services
 
         public override void Initialize()
         {
-           // throw new NotImplementedException();
+            // throw new NotImplementedException();
         }
 
-        public override void ShowWeb(string url)
+        protected override void ShowWeb(string url)
         {
-           // throw new NotImplementedException();
+            // throw new NotImplementedException();
         }
 
         protected override void ShowAbout(AboutViewModel viewModel)
         {
-            var viewController = this.storyboard.InstantiateControllerWithIdentifier("AboutViewController") as NSViewController;
-            this.rootViewController.PresentViewController(viewController, null);
-          //  throw new NotImplementedException();
-        }
-
-        protected override void ShowItemDetail(ItemDetailsViewModel viewModel)
-        {
-          //  throw new NotImplementedException();
+            var viewController = this.storyboard.InstantiateControllerWithIdentifier("AboutViewController") as AboutViewController;
+            this.rootViewController.PresentViewControllerAsModalWindow(viewController);
         }
 
         protected override void ShowItems(ItemsViewModel viewModel)
         {
-           // throw new NotImplementedException();
+            // throw new NotImplementedException();
         }
 
         protected override void ShowNewItem(AddItemViewModel viewModel)
         {
-           // throw new NotImplementedException();
+            // throw new NotImplementedException();
+        }
+
+        protected override void ShowItemDetails(ItemDetailsViewModel viewModel)
+        {
+            //throw new NotImplementedException();
         }
     }
 }

@@ -8,7 +8,7 @@ namespace NavTest.Droid
 {
     [Activity(Label = "Details", ParentActivity = typeof(MainActivity))]
     [MetaData("android.support.PARENT_ACTIVITY", Value = ".MainActivity")]
-    public class BrowseItemDetailActivity : BaseActivity<ItemDetailViewModel>
+    public class BrowseItemDetailActivity : BaseActivity<ItemDetailsViewModel>
     {
         /// <summary>
         /// Specify the layout to inflace

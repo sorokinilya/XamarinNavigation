@@ -42,7 +42,7 @@ namespace NavTest.ViewModels.Items
                     var id = item.Id;
                     this.viewModel.Items.Add(new Item(item.Id, item.Text, item.Description, () =>
                     {
-                        ServiceLayer.Instance.Router.ShowItemDetail(id);
+                        ServiceLayer.Instance.Router.ShowItemDetails(id);
                     }));
                 }
             });

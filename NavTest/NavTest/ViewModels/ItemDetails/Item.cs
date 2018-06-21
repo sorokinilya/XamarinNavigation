@@ -3,13 +3,13 @@ namespace NavTest.ViewModels.ItemDetail
 {
     public struct Item
     {
-        public readonly string text;
-        public readonly string description;
+        public string Text { get; }
+        public string Description { get; }
 
         internal Item(string text, string description)
         {
-            this.text = text;
-            this.description = description;
+            this.Text = text;
+            this.Description = description;
         }
 
     }

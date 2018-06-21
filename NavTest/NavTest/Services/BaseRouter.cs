@@ -28,6 +28,13 @@ namespace NavTest.Services
             this.ShowNewItem(this.GetController(() => new AddItemController()).viewModel);
         }
 
+        internal void ShowItemDetails(int id)
+        {
+            var controller = this.GetController(() => new ItemDetailsController());
+            controller.Id = id;
+            this.ShowItemDetails(controller.viewModel);
+        }
+
         internal void ShowAbout()
         {
             this.ShowAbout(this.GetController(() => new AboutController()).viewModel);
@@ -38,20 +45,13 @@ namespace NavTest.Services
             this.ShowWeb("https://google.com");
         }
 
-        internal void ShowItemDetail(int id)
-        {
-            var contoller = this.GetController(() => new ItemDetailController());
-            contoller.Id = id;
-            this.ShowItemDetail(contoller.viewModel);
-        }
-
         protected abstract void ShowItems(ItemsViewModel viewModel);
 
         protected abstract void ShowNewItem(AddItemViewModel viewModel);
 
-        protected abstract void ShowAbout(AboutViewModel viewModel);
+        protected abstract void ShowItemDetails(ItemDetailsViewModel viewModel);
 
-        protected abstract void ShowItemDetail(ItemDetailViewModel viewModel);
+        protected abstract void ShowAbout(AboutViewModel viewModel);
 
         protected abstract void ShowWeb(string url);
 

@@ -28,7 +28,7 @@ namespace NavTest.Droid
             throw new NotImplementedException();
         }
 
-        protected override void ShowItemDetail(ItemDetailViewModel viewModel)
+        protected override void ShowItemDetail(ItemDetailsViewModel viewModel)
         {
             throw new NotImplementedException();
         }

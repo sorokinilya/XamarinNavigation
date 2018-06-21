@@ -95,9 +95,22 @@ namespace NavTest.iOS
         }
 
 
-        protected override void ShowItemDetail(ItemDetailViewModel viewModel)
+        protected override void ShowItemDetails(ItemDetailsViewModel viewModel)
         {
-
+            Debug.Assert(NSThread.IsMain, "Navigation from second thread" + new StackTrace().GetFrame(1).GetMethod().Name);
+            var selected = this.tabBarController.SelectedIndex == 0;
+            if (!selected)
+            {
+                this.tabBarController.SelectedIndex = 0;
+            }
+            var navigationController = tabBarController.SelectedViewController as UINavigationController;
+            if (this.PopToViewController(navigationController, typeof(BrowseItemDetailViewController), selected) == false)
+            {
+                navigationController.PopToRootViewController(false);
+                var viewController = this.mainStoryboard.InstantiateViewController("BrowseItemDetailViewController") as BrowseItemDetailViewController;
+                viewController.ViewModel = viewModel;
+                navigationController.PushViewController(viewController, selected);
+            }
         }
 
         protected override void ShowWeb(string url)

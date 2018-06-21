@@ -17,8 +17,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\About\AboutResourcesModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Items\ItemsViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Items\ItemsResourcesModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemDetail\ItemDetailViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemDetail\ItemDetailResourcesModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemDetails\ItemDetailsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemDetails\ItemDetailsResourcesModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemNew\AddItemViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemNew\AddItemResourcesModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Base\BaseViewModel.cs" />
@@ -30,12 +30,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Items\Item.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Store\DataStore.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Store\Item.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemDetail\Item.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemDetails\Item.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemNew\Item.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Resources\BaseResourcesService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Resources\ColorKey.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Resources\LocalizedKey.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemDetail\ItemDetailController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemDetails\ItemDetailsController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TabBar\TabBarController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TabBar\TabBarResourcesModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TabBar\TabBarViewModel.cs" />
@@ -44,7 +44,7 @@
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)ViewModels\About\" />
     <Folder Include="$(MSBuildThisFileDirectory)ViewModels\Items\" />
-    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\ItemDetail\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\ItemDetails\" />
     <Folder Include="$(MSBuildThisFileDirectory)ViewModels\ItemNew\" />
     <Folder Include="$(MSBuildThisFileDirectory)ViewModels\Base\" />
     <Folder Include="$(MSBuildThisFileDirectory)Services\Store\" />

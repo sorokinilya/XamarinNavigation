@@ -5,29 +5,11 @@ namespace NavTest.Services
 {
     public partial class ServiceLayer
     {
-        public BaseRouter Router
-        {
-            get
-            {
-                return this.Get<BaseRouter>();
-            }
-        }
+        public BaseRouter Router => this.Get<BaseRouter>();
 
-        public DataStore DataStore
-        {
-            get
-            {
-                return this.Get<DataStore>();
-            }
-        }
+        public DataStore DataStore => this.Get<DataStore>();
 
-        internal BaseResourcesService ResourcesService
-        {
-            get
-            {
-                return this.Get<BaseResourcesService>();
-            }
-        }
+        internal BaseResourcesService ResourcesService => this.Get<BaseResourcesService>();
     }
 }
 

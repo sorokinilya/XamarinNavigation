@@ -2,11 +2,11 @@
 
 namespace NavTest.ViewModels.ItemDetail
 {
-    public class ItemDetailViewModel : BaseViewModel<ItemDetailResourcesModel>
+    public class ItemDetailsViewModel : BaseViewModel<ItemDetailsResourcesModel>
     {
         public Item Item { get; set; }
 
-        internal ItemDetailViewModel() : base() 
+        internal ItemDetailsViewModel() : base()
         {
         }
     }

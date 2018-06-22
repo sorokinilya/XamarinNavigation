@@ -23,8 +23,7 @@ namespace NavTest.iOS
         public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
         {
             var root = Window.RootViewController as TabBarViewController;
-            var router = new Router(root);
-            Core.Initialize(router, new ResourcesService());
+            Core.Initialize(new Router(root), new ResourcesService());
             return true;
         }
 

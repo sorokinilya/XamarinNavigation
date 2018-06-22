@@ -15,9 +15,7 @@ namespace NavTest.macOS
         public override void DidFinishLaunching(NSNotification notification)
         {
             var viewController = NSApplication.SharedApplication.KeyWindow.ContentViewController;
-            var router = new Router(viewController);
-            Core.Initialize(router, new ResourcesService());
-            router.ShowItems();
+            Core.Initialize(new Router(viewController), new ResourcesService());
         }
 
         public override void WillTerminate(NSNotification notification)

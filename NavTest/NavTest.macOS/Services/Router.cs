@@ -22,7 +22,7 @@ namespace NavTest.macOS.Services
 
         internal override void Initialize()
         {
-            // throw new NotImplementedException();
+            this.ShowItems();
         }
 
         protected override void ShowWeb(string url)

@@ -1,6 +1,5 @@
 ﻿using System;
 using UIKit;
-using NavTest;
 using NavTest.ViewModels.Base;
 using System.Diagnostics;
 

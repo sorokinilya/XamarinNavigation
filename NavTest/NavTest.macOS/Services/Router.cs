@@ -33,6 +33,7 @@ namespace NavTest.macOS.Services
         protected override void ShowAbout(AboutViewModel viewModel)
         {
             var viewController = this.storyboard.InstantiateControllerWithIdentifier("AboutViewController") as AboutViewController;
+            viewController.ViewModel = viewModel;
             this.rootViewController.PresentViewControllerAsModalWindow(viewController);
         }
 

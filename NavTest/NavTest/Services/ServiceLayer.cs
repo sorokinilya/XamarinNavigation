@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace NavTest.Services
 {
-    partial class ServiceLayer
+    internal partial class ServiceLayer
     {
         static readonly ServiceLayer instance = new ServiceLayer();
         private readonly Dictionary<Type, object> registeredServices = new Dictionary<Type, object>();

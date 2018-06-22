@@ -92,6 +92,7 @@
     <Compile Include="ViewControllers\AboutViewController.designer.cs">
       <DependentUpon>AboutViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewControllers\BaseViewController.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Main.storyboard" />

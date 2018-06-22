@@ -22,7 +22,7 @@ namespace NavTest.iOS
             this.tabBarController = tabBarController;
         }
 
-        public override void Initialize()
+        internal override void Initialize()
         {
             Debug.Assert(NSThread.IsMain, "Navigation from second thread" + new StackTrace().GetFrame(1).GetMethod().Name);
             var controller = this.GetController(() => new TabBarController());

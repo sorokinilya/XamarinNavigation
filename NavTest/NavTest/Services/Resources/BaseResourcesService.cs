@@ -13,7 +13,7 @@ namespace NavTest.Services.Resources
         {
         }
 
-        public virtual void Initialize()
+        internal virtual void Initialize()
         {
             foreach (var item in this.defaultColors())
             {
@@ -29,17 +29,17 @@ namespace NavTest.Services.Resources
             }
         }
 
-        public Int32 GetColor(ColorKey key)
+        internal Int32 GetColor(ColorKey key)
         {
             return this.colors[key];
         }
 
-        public string GetString(LocalizedKey key)
+        internal string GetString(LocalizedKey key)
         {
             return this.strings[key];
         }
 
-        public string GetImage(ImageKey key)
+        internal string GetImage(ImageKey key)
         {
             return this.images[key];
         }

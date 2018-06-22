@@ -5,16 +5,16 @@ using System.Threading.Tasks;
 
 namespace NavTest.Services.Store
 {
-    public class DataStore
+    class DataStore
     {
         List<Item> items;
 
-        public DataStore()
+        internal DataStore()
         {
             items = new List<Item>();
         }
 
-        public void Initialize()
+        internal void Initialize()
         {
             var _items = new List<Item>
             {
@@ -31,14 +31,14 @@ namespace NavTest.Services.Store
             }
         }
 
-        public async Task<bool> AddItemAsync(Item item)
+        internal async Task<bool> AddItemAsync(Item item)
         {
             items.Add(item);
             await Task.Delay(2500);
             return await Task.FromResult(true);
         }
 
-        public async Task<bool> UpdateItemAsync(Item item)
+        internal async Task<bool> UpdateItemAsync(Item item)
         {
             var _item = items.Where((Item arg) => arg.Id == item.Id).FirstOrDefault();
             items.Remove(_item);
@@ -47,7 +47,7 @@ namespace NavTest.Services.Store
             return await Task.FromResult(true);
         }
 
-        public async Task<bool> DeleteItemAsync(int id)
+        internal async Task<bool> DeleteItemAsync(int id)
         {
             var _item = items.Where((Item arg) => arg.Id == id).FirstOrDefault();
             items.Remove(_item);
@@ -55,13 +55,13 @@ namespace NavTest.Services.Store
             return await Task.FromResult(true);
         }
 
-        public async Task<Item> GetItemAsync(int id)
+        internal async Task<Item> GetItemAsync(int id)
         {
             await Task.Delay(2500);
             return await Task.FromResult(items.FirstOrDefault(s => s.Id == id));
         }
 
-        public async Task<IEnumerable<Item>> GetItemsAsync()
+        internal async Task<IEnumerable<Item>> GetItemsAsync()
         {
             await Task.Delay(2500);
             return await Task.FromResult(items);

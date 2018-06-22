@@ -16,7 +16,7 @@ namespace NavTest.Services
         {
         }
 
-        public abstract void Initialize();
+        internal abstract void Initialize();
 
         internal void ShowItems()
         {

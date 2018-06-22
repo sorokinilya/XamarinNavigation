@@ -20,7 +20,7 @@ namespace NavTest.macOS.Services
             this.storyboard = NSStoryboard.FromName("Main", null);
         }
 
-        public override void Initialize()
+        internal override void Initialize()
         {
             // throw new NotImplementedException();
         }
